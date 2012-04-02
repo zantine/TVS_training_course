@@ -1,0 +1,483 @@
+V3 284
+FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/amba/ahbctrl.vhd 2011/06/28.10:56:34 O.87xd
+EN grlib/ahbctrl 1327932645 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/amba/ahbctrl.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PB grlib/stdlib 1327932507 \
+      PB grlib/amba 1327932509
+AR grlib/ahbctrl/rtl 1327932646 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/amba/ahbctrl.vhd \
+      EN grlib/ahbctrl 1327932645
+FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/amba/amba.vhd 2011/06/28.10:56:34 O.87xd
+PH grlib/amba 1327932508 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/amba/amba.vhd \
+      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB GRLIB \
+      CD ahbctrl CD apbctrl CD ahbctrl_mb CD ahbdefmst PH grlib/config 1327932505 \
+      PB grlib/stdlib 1327932507
+PB grlib/amba 1327932509 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/amba/amba.vhd PH grlib/amba 1327932508
+FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/amba/apbctrl.vhd 2011/06/28.10:56:34 O.87xd
+EN grlib/apbctrl 1327932643 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/amba/apbctrl.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PB grlib/amba 1327932509 \
+      PB grlib/stdlib 1327932507
+AR grlib/apbctrl/rtl 1327932644 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/amba/apbctrl.vhd \
+      EN grlib/apbctrl 1327932643
+FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/amba/defmst.vhd 2011/06/28.10:56:34 O.87xd
+EN grlib/ahbdefmst 1327932641 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/amba/defmst.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PB grlib/stdlib 1327932507 \
+      PB grlib/amba 1327932509
+AR grlib/ahbdefmst/rtl 1327932642 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/amba/defmst.vhd \
+      EN grlib/ahbdefmst 1327932641
+FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/amba/devices.vhd 2011/06/28.10:56:34 O.87xd
+PH grlib/devices 1327932640 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/amba/devices.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PB grlib/amba 1327932509
+FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/amba/dma2ahb.vhd 2011/06/28.10:56:34 O.87xd
+EN grlib/DMA2AHB 1327932647 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/amba/dma2ahb.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PB grlib/amba 1327932509 \
+      PB grlib/stdlib 1327932507 PH grlib/DMA2AHB_Package 1327932510
+AR grlib/DMA2AHB/RTL 1327932648 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/amba/dma2ahb.vhd \
+      EN grlib/DMA2AHB 1327932647
+FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/amba/dma2ahb_pkg.vhd 2011/06/28.10:56:34 O.87xd
+PH grlib/DMA2AHB_Package 1327932510 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/amba/dma2ahb_pkg.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB CD DMA2AHB PB grlib/amba 1327932509
+FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd 2011/06/28.10:56:34 O.87xd
+PH grlib/blocks 1327932513 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 CD FLIPFLOP CD DBLCADDER_32_32 \
+      CD FULL_ADDER CD HALF_ADDER CD R_GATE CD DECODER CD PP_LOW CD PP_MIDDLE \
+      CD PP_HIGH CD BLOCK0 CD INVBLOCK CD BLOCK1 CD BLOCK1A CD BLOCK2 CD BLOCK2A \
+      CD PRESTAGE_32 CD XXOR1 CD XXOR2 CD DBLCTREE_32 CD XORSTAGE_32 CD DBLC_0_32 \
+      CD DBLC_1_32 CD DBLC_2_32 CD DBLC_3_32 CD DBLC_4_32 CD PRESTAGE_64 \
+      CD DBLCTREE_64 CD XORSTAGE_64 CD DBLC_0_64 CD DBLC_1_64 CD DBLC_2_64 \
+      CD DBLC_3_64 CD DBLC_4_64 CD DBLC_5_64 CD DBLC_0_128 CD DBLC_1_128 \
+      CD DBLC_2_128 CD DBLC_3_128 CD DBLC_4_128 CD DBLC_5_128 CD DBLC_6_128 \
+      CD PRESTAGE_128 CD DBLCTREE_128 CD XORSTAGE_128 CD BOOTHCODER_18_18 \
+      CD WALLACE_18_18 CD DBLCADDER_64_64 CD BOOTHCODER_34_10 CD WALLACE_34_10 \
+      CD BOOTHCODER_34_18 CD WALLACE_34_18 CD BOOTHCODER_34_34 CD WALLACE_34_34 \
+      CD DBLCADDER_128_128 CD MULTIPLIER_18_18 CD MULTIPLIER_34_10 \
+      CD MULTIPLIER_34_18 CD MULTIPLIER_34_34
+EN grlib/FLIPFLOP 1327932514 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR grlib/FLIPFLOP/FLIPFLOP 1327932515 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/FLIPFLOP 1327932514
+EN grlib/PP_LOW 1327932516 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR grlib/PP_LOW/PP_LOW 1327932517 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/PP_LOW 1327932516
+EN grlib/PP_MIDDLE 1327932518 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR grlib/PP_MIDDLE/PP_MIDDLE 1327932519 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/PP_MIDDLE 1327932518
+EN grlib/PP_HIGH 1327932520 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR grlib/PP_HIGH/PP_HIGH 1327932521 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/PP_HIGH 1327932520
+EN grlib/R_GATE 1327932522 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR grlib/R_GATE/R_GATE 1327932523 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/R_GATE 1327932522
+EN grlib/DECODER 1327932524 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR grlib/DECODER/DECODER 1327932525 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DECODER 1327932524
+EN grlib/FULL_ADDER 1327932526 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR grlib/FULL_ADDER/FULL_ADDER 1327932527 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/FULL_ADDER 1327932526
+EN grlib/HALF_ADDER 1327932528 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR grlib/HALF_ADDER/HALF_ADDER 1327932529 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/HALF_ADDER 1327932528
+EN grlib/INVBLOCK 1327932530 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR grlib/INVBLOCK/INVBLOCK_regular 1327932531 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/INVBLOCK 1327932530
+EN grlib/XXOR1 1327932532 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR grlib/XXOR1/XXOR_regular 1327932533 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/XXOR1 1327932532
+EN grlib/BLOCK0 1327932534 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR grlib/BLOCK0/BLOCK0_regular 1327932535 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/BLOCK0 1327932534
+EN grlib/BLOCK1 1327932536 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR grlib/BLOCK1/BLOCK1_regular 1327932537 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/BLOCK1 1327932536
+EN grlib/BLOCK2 1327932538 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR grlib/BLOCK2/BLOCK2_regular 1327932539 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/BLOCK2 1327932538
+EN grlib/BLOCK1A 1327932540 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR grlib/BLOCK1A/BLOCK1A_regular 1327932541 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/BLOCK1A 1327932540
+EN grlib/BLOCK2A 1327932542 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR grlib/BLOCK2A/BLOCK2A_regular 1327932543 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/BLOCK2A 1327932542
+EN grlib/PRESTAGE_64 1327932544 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/PRESTAGE_64/PRESTAGE 1327932545 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/PRESTAGE_64 1327932544 CP BLOCK0 CP INVBLOCK
+EN grlib/DBLC_0_64 1327932546 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLC_0_64/DBLC_0 1327932547 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLC_0_64 1327932546 CP INVBLOCK CP BLOCK1A CP BLOCK1
+EN grlib/DBLC_1_64 1327932548 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLC_1_64/DBLC_1 1327932549 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLC_1_64 1327932548 CP INVBLOCK CP BLOCK2A CP BLOCK2
+EN grlib/DBLC_2_64 1327932550 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLC_2_64/DBLC_2 1327932551 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLC_2_64 1327932550 CP INVBLOCK CP BLOCK1A CP BLOCK1
+EN grlib/DBLC_3_64 1327932552 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLC_3_64/DBLC_3 1327932553 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLC_3_64 1327932552 CP INVBLOCK CP BLOCK2A CP BLOCK2
+EN grlib/DBLC_4_64 1327932554 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLC_4_64/DBLC_4 1327932555 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLC_4_64 1327932554 CP INVBLOCK CP BLOCK1A CP BLOCK1
+EN grlib/DBLC_5_64 1327932556 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLC_5_64/DBLC_5 1327932557 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLC_5_64 1327932556 CP INVBLOCK CP BLOCK2A CP BLOCK2
+EN grlib/XORSTAGE_64 1327932558 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/XORSTAGE_64/XORSTAGE 1327932559 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/XORSTAGE_64 1327932558 CP XXOR1 CP BLOCK1A
+EN grlib/DBLCTREE_64 1327932560 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLCTREE_64/DBLCTREE 1327932561 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLCTREE_64 1327932560 CP DBLC_0_64 CP DBLC_1_64 CP DBLC_2_64 \
+      CP DBLC_3_64 CP DBLC_4_64 CP DBLC_5_64
+EN grlib/DBLCADDER_64_64 1327932562 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLCADDER_64_64/DBLCADDER 1327932563 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLCADDER_64_64 1327932562 CP PRESTAGE_64 CP DBLCTREE_64 \
+      CP XORSTAGE_64
+EN grlib/XXOR2 1327932564 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR grlib/XXOR2/XXOR_true 1327932565 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/XXOR2 1327932564
+EN grlib/DBLC_0_32 1327932566 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLC_0_32/DBLC_0 1327932567 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLC_0_32 1327932566 CP INVBLOCK CP BLOCK1A CP BLOCK1
+EN grlib/DBLC_1_32 1327932568 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLC_1_32/DBLC_1 1327932569 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLC_1_32 1327932568 CP INVBLOCK CP BLOCK2A CP BLOCK2
+EN grlib/DBLC_2_32 1327932570 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLC_2_32/DBLC_2 1327932571 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLC_2_32 1327932570 CP INVBLOCK CP BLOCK1A CP BLOCK1
+EN grlib/DBLC_3_32 1327932572 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLC_3_32/DBLC_3 1327932573 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLC_3_32 1327932572 CP INVBLOCK CP BLOCK2A CP BLOCK2
+EN grlib/DBLC_4_32 1327932574 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLC_4_32/DBLC_4 1327932575 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLC_4_32 1327932574 CP BLOCK1A CP BLOCK1
+EN grlib/XORSTAGE_32 1327932576 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/XORSTAGE_32/XORSTAGE 1327932577 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/XORSTAGE_32 1327932576 CP XXOR1 CP XXOR2 CP BLOCK2A
+EN grlib/PRESTAGE_32 1327932578 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/PRESTAGE_32/PRESTAGE 1327932579 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/PRESTAGE_32 1327932578 CP BLOCK0 CP INVBLOCK
+EN grlib/DBLCTREE_32 1327932580 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLCTREE_32/DBLCTREE 1327932581 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLCTREE_32 1327932580 CP DBLC_0_32 CP DBLC_1_32 CP DBLC_2_32 \
+      CP DBLC_3_32 CP DBLC_4_32
+EN grlib/DBLCADDER_32_32 1327932582 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLCADDER_32_32/DBLCADDER 1327932583 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLCADDER_32_32 1327932582 CP PRESTAGE_32 CP DBLCTREE_32 \
+      CP XORSTAGE_32
+EN grlib/PRESTAGE_128 1327932584 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/PRESTAGE_128/PRESTAGE 1327932585 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/PRESTAGE_128 1327932584 CP BLOCK0 CP INVBLOCK
+EN grlib/DBLC_0_128 1327932586 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLC_0_128/DBLC_0 1327932587 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLC_0_128 1327932586 CP INVBLOCK CP BLOCK1A CP BLOCK1
+EN grlib/DBLC_1_128 1327932588 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLC_1_128/DBLC_1 1327932589 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLC_1_128 1327932588 CP INVBLOCK CP BLOCK2A CP BLOCK2
+EN grlib/DBLC_2_128 1327932590 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLC_2_128/DBLC_2 1327932591 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLC_2_128 1327932590 CP INVBLOCK CP BLOCK1A CP BLOCK1
+EN grlib/DBLC_3_128 1327932592 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLC_3_128/DBLC_3 1327932593 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLC_3_128 1327932592 CP INVBLOCK CP BLOCK2A CP BLOCK2
+EN grlib/DBLC_4_128 1327932594 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLC_4_128/DBLC_4 1327932595 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLC_4_128 1327932594 CP INVBLOCK CP BLOCK1A CP BLOCK1
+EN grlib/DBLC_5_128 1327932596 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLC_5_128/DBLC_5 1327932597 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLC_5_128 1327932596 CP INVBLOCK CP BLOCK2A CP BLOCK2
+EN grlib/DBLC_6_128 1327932598 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLC_6_128/DBLC_6 1327932599 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLC_6_128 1327932598 CP BLOCK1A CP BLOCK1
+EN grlib/XORSTAGE_128 1327932600 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/XORSTAGE_128/XORSTAGE 1327932601 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/XORSTAGE_128 1327932600 CP XXOR1 CP XXOR2 CP BLOCK2A
+EN grlib/DBLCTREE_128 1327932602 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLCTREE_128/DBLCTREE 1327932603 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLCTREE_128 1327932602 CP DBLC_0_128 CP DBLC_1_128 CP DBLC_2_128 \
+      CP DBLC_3_128 CP DBLC_4_128 CP DBLC_5_128 CP DBLC_6_128
+EN grlib/DBLCADDER_128_128 1327932604 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/DBLCADDER_128_128/DBLCADDER 1327932605 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/DBLCADDER_128_128 1327932604 CP PRESTAGE_128 CP DBLCTREE_128 \
+      CP XORSTAGE_128
+EN grlib/BOOTHCODER_18_18 1327932606 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/BOOTHCODER_18_18/BOOTHCODER 1327932607 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/BOOTHCODER_18_18 1327932606 CP DECODER CP PP_LOW CP R_GATE \
+      CP PP_MIDDLE CP PP_HIGH
+EN grlib/WALLACE_18_18 1327932608 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/WALLACE_18_18/WALLACE 1327932609 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/WALLACE_18_18 1327932608 CP HALF_ADDER CP FULL_ADDER
+EN grlib/MULTIPLIER_18_18 1327932610 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/MULTIPLIER_18_18/MULTIPLIER 1327932611 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/MULTIPLIER_18_18 1327932610 CP BOOTHCODER_18_18 CP WALLACE_18_18 \
+      CP DBLCADDER_64_64
+EN grlib/BOOTHCODER_34_10 1327932612 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/BOOTHCODER_34_10/BOOTHCODER 1327932613 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/BOOTHCODER_34_10 1327932612 CP DECODER CP PP_LOW CP R_GATE \
+      CP PP_MIDDLE CP PP_HIGH
+EN grlib/WALLACE_34_10 1327932614 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/WALLACE_34_10/WALLACE 1327932615 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/WALLACE_34_10 1327932614 CP HALF_ADDER CP FULL_ADDER
+EN grlib/MULTIPLIER_34_10 1327932616 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/MULTIPLIER_34_10/MULTIPLIER 1327932617 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/MULTIPLIER_34_10 1327932616 CP BOOTHCODER_34_10 CP WALLACE_34_10 \
+      CP DBLCADDER_64_64
+EN grlib/MUL_33_9 1327932618 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/MUL_33_9/A 1327932619 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/MUL_33_9 1327932618 PB ieee/std_logic_1164 1325952872 \
+      CP MULTIPLIER_34_10
+EN grlib/BOOTHCODER_34_18 1327932620 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/BOOTHCODER_34_18/BOOTHCODER 1327932621 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/BOOTHCODER_34_18 1327932620 CP DECODER CP PP_LOW CP R_GATE \
+      CP PP_MIDDLE CP PP_HIGH
+EN grlib/WALLACE_34_18 1327932622 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/WALLACE_34_18/WALLACE 1327932623 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/WALLACE_34_18 1327932622 CP HALF_ADDER CP FULL_ADDER
+EN grlib/MULTIPLIER_34_18 1327932624 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/MULTIPLIER_34_18/MULTIPLIER 1327932625 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/MULTIPLIER_34_18 1327932624 CP BOOTHCODER_34_18 CP WALLACE_34_18 \
+      CP DBLCADDER_64_64
+EN grlib/MUL_33_17 1327932626 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/MUL_33_17/A 1327932627 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/MUL_33_17 1327932626 PB ieee/std_logic_1164 1325952872 \
+      CP MULTIPLIER_34_18
+EN grlib/BOOTHCODER_34_34 1327932628 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/BOOTHCODER_34_34/BOOTHCODER 1327932629 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/BOOTHCODER_34_34 1327932628 CP DECODER CP PP_LOW CP R_GATE \
+      CP PP_MIDDLE CP PP_HIGH
+EN grlib/WALLACE_34_34 1327932630 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/WALLACE_34_34/WALLACE 1327932631 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/WALLACE_34_34 1327932630 CP HALF_ADDER CP FULL_ADDER
+EN grlib/MULTIPLIER_34_34 1327932632 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/MULTIPLIER_34_34/MULTIPLIER 1327932633 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/MULTIPLIER_34_34 1327932632 CP BOOTHCODER_34_34 CP WALLACE_34_34 \
+      CP DBLCADDER_128_128
+EN grlib/MUL_33_33 1327932634 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/MUL_33_33/A 1327932635 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/MUL_33_33 1327932634 CP MULTIPLIER_34_34
+EN grlib/ADD32 1327932636 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/ADD32/A 1327932637 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/ADD32 1327932636 CP DBLCADDER_32_32
+EN grlib/MUL_17_17 1327932638 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      PB ieee/std_logic_1164 1325952872 LB GRLIB PH grlib/blocks 1327932513
+AR grlib/MUL_17_17/A 1327932639 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/leaves.vhd \
+      EN grlib/MUL_17_17 1327932638 CP MULTIPLIER_18_18
+FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/multlib.vhd 2011/06/28.10:56:34 O.87xd
+PH grlib/multlib 1327932512 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/modgen/multlib.vhd \
+      PB ieee/std_logic_1164 1325952872 CD mul_17_17 CD mul_33_9 CD mul_33_17 \
+      CD mul_33_33 CD add32
+FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/sparc/sparc.vhd 2011/06/28.10:56:34 O.87xd
+PH grlib/sparc 1327932511 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/sparc/sparc.vhd \
+      PB ieee/std_logic_1164 1325952872
+FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/stdlib/config.vhd 2011/06/28.10:56:34 O.87xd
+PH grlib/config 1327932505 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/stdlib/config.vhd \
+      PB ieee/std_logic_1164 1325952872
+FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/stdlib/stdlib.vhd 2011/06/28.10:56:34 O.87xd
+PH grlib/stdlib 1327932506 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/stdlib/stdlib.vhd \
+      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877 LB GRLIB \
+      PH grlib/version 1327932504
+PB grlib/stdlib 1327932507 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/stdlib/stdlib.vhd \
+      PH grlib/stdlib 1327932506
+FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/stdlib/version.vhd 2011/06/28.10:56:34 O.87xd
+PH grlib/version 1327932504 \
+      FL /home/mike/grlib-gpl-1.1.0-b4108/lib/grlib/stdlib/version.vhd

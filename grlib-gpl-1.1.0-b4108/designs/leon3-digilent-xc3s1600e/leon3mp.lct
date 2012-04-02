@@ -1,0 +1,8 @@
+[Device]
+Family = ;
+PartNumber = xc3s1600e-4fg320;
+Package = ;
+PartType = xc3s1600e;
+Speed = -4;
+Operating_condition = COM;
+Status = Production;

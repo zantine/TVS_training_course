@@ -1,0 +1,96 @@
+Release 13.4 ngdbuild O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: /opt/Xilinx/13.4/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild
+leon3mp.ngc -aul -uc leon3mp.ucf -p xc3s1600e-fg320-4 -sd
+../../netlists/xilinx/Spartan3
+
+Reading NGO file
+"/home/mike/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e/leon3mp.ngc"
+...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "leon3mp.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:59 - Constraint <INST
+   "ddrsp0.ddrc/ddr_phy0/ddr_phy0/xc3se.ddr_phy0/nops.read_dll" LOC = DCM_X1Y3;>
+   [leon3mp.ucf(25)]: INST
+   "ddrsp0.ddrc/ddr_phy0/ddr_phy0/xc3se.ddr_phy0/nops.read_dll" not found. 
+   Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST "ddrsp0.ddrc/ddr_phy0/ddr_phy0/xc3se.ddr_phy0/nops.read_dll" LOC =
+   DCM_X1Y3;> [leon3mp.ucf(25)]' could not be found and so the Locate constraint
+   will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <Net sts LOC=B18 ;> [leon3mp.ucf(214)]:
+   NET "sts" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<Net sts LOC=B18 ;> [leon3mp.ucf(214)]' could not be found and so the Locate
+   constraint will be removed.
+
+INFO:ConstraintSystem:178 - TNM 'ddr_clk_fb', used in period specification
+   'TS_ddr_clk_fb', was traced into DCM_SP instance
+   ddrsp0.ddrc/ddr_phy0/ddr_phy0/xc3se.ddr_phy0/ps.read_dll. The following new
+   TNM groups and period specifications were generated at the DCM_SP output(s): 
+   CLK90: <TIMESPEC TS_ddrsp0_ddrc_ddr_phy0_ddr_phy0_xc3se_ddr_phy0_rclk90 =
+   PERIOD "ddrsp0_ddrc_ddr_phy0_ddr_phy0_xc3se_ddr_phy0_rclk90" TS_ddr_clk_fb
+   PHASE 4.0625 ns HIGH 50%>
+
+INFO:ConstraintSystem - The Period constraint <NET "clk_50mhz" PERIOD = 20ns
+   HIGH 40%;> [leon3mp.ucf(5)], is specified using the Net Period method which
+   is not recommended. Please use the Timespec PERIOD method.
+
+INFO:ConstraintSystem - The Period constraint <NET erx_clk PERIOD = 40.000 ;>
+   [leon3mp.ucf(7)], is specified using the Net Period method which is not
+   recommended. Please use the Timespec PERIOD method.
+
+INFO:ConstraintSystem - The Period constraint <NET etx_clk PERIOD = 40.000 ;>
+   [leon3mp.ucf(9)], is specified using the Net Period method which is not
+   recommended. Please use the Timespec PERIOD method.
+
+WARNING:ConstraintSystem - The Offset constraint <OFFSET = IN : 10.000 : BEFORE
+   erx_clk ;> [leon3mp.ucf(8)], is specified without a duration.  This will
+   result in a lack of hold time checks in timing reports.  If hold time checks
+   are desired a duration value should be specified following the 'VALID'
+   keyword.
+
+WARNING:ConstraintSystem - The Offset constraint <OFFSET = IN : 8.000 : BEFORE
+   etx_clk ;> [leon3mp.ucf(11)], is specified without a duration.  This will
+   result in a lack of hold time checks in timing reports.  If hold time checks
+   are desired a duration value should be specified following the 'VALID'
+   keyword.
+
+Done...
+
+INFO:NgdBuild:1222 - Setting CLKIN_PERIOD attribute associated with DCM instance
+   ddrsp0.ddrc/ddr_phy0/ddr_phy0/xc3se.ddr_phy0/ps.read_dll to 10.000000 ns
+   based on the period specification (<TIMESPEC "TS_ddr_clk_fb" = PERIOD
+   "ddr_clk_fb" 10.00 ns HIGH 50 %;> [leon3mp.ucf(20)]).
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   4
+
+Total memory usage is 572268 kilobytes
+
+Writing NGD file "leon3mp.ngd" ...
+Total REAL time to NGDBUILD completion:  22 sec
+Total CPU time to NGDBUILD completion:   12 sec
+
+Writing NGDBUILD log file "leon3mp.bld"...

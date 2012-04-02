@@ -1,0 +1,232 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+Pcomponents
+Z1 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 w1309254994
+Z4 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+8../../lib/micron/sdram/components.vhd
+F../../lib/micron/sdram/components.vhd
+l0
+L25
+V=JJh5SFR::3L4R9jTl01=0
+Z5 OL;C;10.0b;49
+31
+Z6 o-quiet -93 -work micron
+Z7 tShow_source 1 Show_Warning1 0 Show_Warning5 0 Explicit 1 Quiet 1
+!s100 kX^E93M1m[lkSI]BB;_E82
+!s108 1327932277.366521
+!s90 -quiet|-93|-work|micron|../../lib/micron/sdram/components.vhd|
+!s107 ../../lib/micron/sdram/components.vhd|
+vddr2
+IUPcTcTI:TEnZ]c1CKRAeY2
+VdU=_D2MCCLS[X_[VQUaU11
+R4
+Z8 w1309254877
+8../../lib/micron/ddr/ddr2.v
+F../../lib/micron/ddr/ddr2.v
+L0 114
+Z9 OL;L;10.0b;49
+r1
+31
+Z10 o-quiet -work micron
+Z11 tQuiet 1
+!s100 Id=g8P?3DWUF@H1`VJ8D]0
+!s85 0
+!s108 1327932277.493459
+!s107 ../../lib/micron/ddr/ddr2.v|
+!s90 -quiet|-work|micron|../../lib/micron/ddr/ddr2.v|
+vddr3
+IXbNYQ4VBQ2Fl9ZMFC52UO2
+V3e@Y[NkXFje3^z9OgnG?I3
+R4
+R8
+8../../lib/micron/ddr/ddr3.v
+F../../lib/micron/ddr/ddr3.v
+L0 83
+R9
+r1
+31
+R10
+R11
+!s100 b;][o`=ij8P0MOT[mgVG_2
+!s85 0
+!s108 1327932277.746016
+!s107 ../../lib/micron/ddr/ddr3.v|
+!s90 -quiet|-work|micron|../../lib/micron/ddr/ddr3.v|
+vmobile_ddr
+Ih<ET;0oPUz`nXXzGgHjDJ2
+V5fzeQoLcAg^@@5Z9Nk<JU3
+R4
+R8
+8../../lib/micron/ddr/mobile_ddr.v
+F../../lib/micron/ddr/mobile_ddr.v
+L0 73
+R9
+r1
+31
+R10
+R11
+!s100 ^0Q;ASC;FVGZgUIXCi4c=1
+!s85 0
+!s108 1327932277.613562
+!s107 ../../lib/micron/ddr/mobile_ddr.v|
+!s90 -quiet|-work|micron|../../lib/micron/ddr/mobile_ddr.v|
+vmobile_sdr
+IN?d:_<a3]fQR8P03n8QFn1
+V9z<oaz;X`1LjeEg97]feU2
+R4
+R8
+8../../lib/micron/sdram/mobile_sdr.v
+F../../lib/micron/sdram/mobile_sdr.v
+L0 70
+R9
+r1
+31
+R10
+R11
+!s100 M4PI1WjkzQOSnimdU;;162
+!s85 0
+!s108 1327932277.231872
+!s107 ../../lib/micron/sdram/mobile_sdr.v|
+!s90 -quiet|-work|micron|../../lib/micron/sdram/mobile_sdr.v|
+Emt46v16m16
+R3
+Z12 DPx5 grlib 7 devices 0 22 nH[U_@>flN29_7Tnj89QB3
+Z13 DPx5 grlib 6 config 0 22 B=<4[MP]PX4lOkMGDR2352
+Z14 DPx5 grlib 4 amba 0 22 lANGVoniT0WO]bYU@YQ0P0
+Z15 DPx5 grlib 5 stdio 0 22 Q[dN`bfzCngEcfl1NNZhG3
+Z16 DPx7 gaisler 3 sim 0 22 X:CR:b[m:_bS6DOc;jB570
+Z17 DPx5 grlib 7 version 0 22 1m_Cgoejn7LU6]zafCACE0
+Z18 DPx5 grlib 6 stdlib 0 22 aUG_c=:Dze031IULUIQkE1
+Z19 DPx4 work 7 mti_pkg 0 22 CzPWC37zA^1f^SUah<bL^3
+Z20 DPx4 ieee 11 numeric_std 0 22 k7B<7GmYYYmX;0X]XHFD10
+R1
+R2
+R4
+Z21 8../../lib/micron/ddr/mt46v16m16.vhd
+Z22 F../../lib/micron/ddr/mt46v16m16.vhd
+l0
+L53
+Va9gRK;KGNTVkcgCmzgLBl2
+!s100 Ua]>L`WN<49L^<MkiZ4=o1
+R5
+31
+Z23 !s108 1331743933.105626
+Z24 !s90 -quiet|-93|-work|micron|../../lib/micron/ddr/mt46v16m16.vhd|
+Z25 !s107 ../../lib/micron/ddr/mt46v16m16.vhd|
+R6
+R7
+Abehave
+R12
+R13
+R14
+R15
+R16
+R17
+R18
+R19
+R20
+R1
+R2
+Z26 DEx4 work 10 mt46v16m16 0 22 a9gRK;KGNTVkcgCmzgLBl2
+l149
+L94
+Z27 VCZ5c574D61NY9VeNdECoK3
+Z28 !s100 B2X9ZST^Il74CZkWkO_3]0
+R5
+31
+R23
+R24
+R25
+R6
+R7
+Emt48lc16m16a2
+R3
+R12
+R13
+R14
+R15
+R16
+R17
+R20
+R18
+R19
+R2
+R1
+R4
+Z29 8../../lib/micron/sdram/mt48lc16m16a2.vhd
+Z30 F../../lib/micron/sdram/mt48lc16m16a2.vhd
+l0
+L206
+VMCY8iR?RH61oMA9bh7ReL1
+R5
+31
+Z31 !s108 1331743932.944986
+Z32 !s90 -quiet|-93|-work|micron|../../lib/micron/sdram/mt48lc16m16a2.vhd|
+Z33 !s107 ../../lib/micron/sdram/mt48lc16m16a2.vhd|
+R6
+R7
+!s100 SKk>G^Dm7JKR_[z`4SEko1
+Abehave
+R12
+R13
+R14
+R15
+R16
+R17
+R20
+R18
+R19
+R2
+R1
+DEx4 work 13 mt48lc16m16a2 0 22 MCY8iR?RH61oMA9bh7ReL1
+l279
+L253
+V]_KWiT2z?ggAZ:jAYd?eW3
+!s100 ?=Vz_IQ<aWA^n2dgZgFWM3
+R5
+31
+R31
+R32
+R33
+R6
+R7
+Pmti_pkg
+R1
+R2
+R3
+R4
+R29
+R30
+l0
+L17
+VCzPWC37zA^1f^SUah<bL^3
+R5
+31
+b1
+R31
+R32
+R33
+R6
+R7
+!s100 91V3Ki@0D^dDlaGeWoaJ:2
+Bbody
+R19
+R1
+R2
+l0
+L28
+VI_b9FP=SYho9f1oaAakhD2
+!s100 L@mD<gmh]G<P8C1AzlSO>3
+R5
+31
+R31
+R32
+R33
+R6
+R7
+nbody

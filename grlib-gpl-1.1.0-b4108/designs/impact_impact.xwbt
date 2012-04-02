@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/mike/grlib-gpl-1.1.0-b4108/designs/impact.xsl
+OUTFILE=/home/mike/grlib-gpl-1.1.0-b4108/designs/impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=/home/mike/grlib-gpl-1.1.0-b4108/designs
+LICENSE=iMPACT
+USER_INFO=iMPACT

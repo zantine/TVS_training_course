@@ -1,0 +1,115 @@
+iMPACT Version: Jan  6 2012 20:13:43
+
+iMPACT log file Started on Fri Feb  3 17:45:36 2012
+
+Preference Table
+Name                 Setting             
+StartupClock         Auto_Correction     
+AutoSignature        False               
+KeepSVF              False               
+ConcurrentMode       False               
+UseHighz             False               
+ConfigOnFailure      Stop                
+UserLevel            Novice              
+MessageLevel         Detailed            
+svfUseTime           false               
+SpiByteSwap          Auto_Correction     
+AutoInfer            false               
+SvfPlayDisplayComments false               
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+If you are using the Platform Cable USB, please refer to the USB CableInstallation Guide (UG344) to install the libusb package.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+File version of /opt/Xilinx/13.4/ISE_DS/ISE/bin/lin64/xusbdfwu.hex = 1030.
+File version of /etc/hotplug/usb/xusbdfwu.fw/xusbdfwu.hex = 1030.
+ WinDriver v10.31 Jungo (c) 1997 - 2011 Build Date: May 24 2011 x86_64 64bit18:13:19.
+ Cable PID = 0008.
+ Max current requested during enumeration is 74 mA.
+Type = 0x0004.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 1029.
+File version of /opt/Xilinx/13.4/ISE_DS/ISE/data/xusb_xlp.hex = 1303.
+Firmware hex file version = 1303.
+Downloading /opt/Xilinx/13.4/ISE_DS/ISE/data/xusb_xlp.hex.
+Downloaded firmware version = 1303.
+PLD file version = 0012h.
+ PLD version = 0012h.
+Type = 0x0004.
+ ESN device is not available for this cable.
+Identifying chain contents...'0': : Manufacturer's ID = Xilinx xc2c64a, Version : 0
+INFO:iMPACT:1777 - 
+   Reading /opt/Xilinx/13.4/ISE_DS/ISE/xbr/data/xc2c64a.bsd...
+INFO:iMPACT:501 - '1': Added Device xc2c64a successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+'1': : Manufacturer's ID = Xilinx xcf04s, Version : 15
+INFO:iMPACT:1777 - 
+   Reading /opt/Xilinx/13.4/ISE_DS/ISE/xcf/data/xcf04s.bsd...
+INFO:iMPACT:501 - '1': Added Device xcf04s successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+'2': : Manufacturer's ID = Xilinx xcf04s, Version : 15
+INFO:iMPACT:501 - '1': Added Device xcf04s successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+'3': : Manufacturer's ID = Xilinx xc3s1600e, Version : 2
+INFO:iMPACT:1777 - 
+   Reading /opt/Xilinx/13.4/ISE_DS/ISE/spartan3e/data/xc3s1600e.bsd...
+INFO:iMPACT:501 - '1': Added Device xc3s1600e successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+done.
+Elapsed time =      1 sec.
+Elapsed time =      0 sec.
+'2': Loading file 'digilent-xc3s1600e_0.mcs' ...
+done.
+'3': Loading file 'digilent-xc3s1600e_1.mcs' ...
+WARNING:iMPACT - The file 'digilent-xc3s1600e_1.mcs' does not appear to be a   configuration file. 
+    This file will not configure a Xilinx device in Serial or SelectMap modes   and may not be intended for configuration. 
+    If this is a cascaded PROM file,  you may ignore this warning and proceed. 
+done.
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Calculated checksum matches expected checksum, 00130a8c0
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Setting user-programmable bits...
+done.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+'2': Programming completed successfully.
+'3': Erasing device...
+'3': Erasure completed successfully.
+'3': Programming device...
+done.
+'3': Putting device in ISP mode...done.
+'3': Putting device in ISP mode...done.
+'3': Verifying device...done.
+'3': Verification completed successfully.
+'3': Calculated checksum matches expected checksum, 004d45fdd
+'3': Putting device in ISP mode...done.
+'3': Putting device in ISP mode...done.
+'3': Setting user-programmable bits...
+done.
+'3': Putting device in ISP mode...done.
+'3': Programming completed successfully.
+'3': Programming completed successfully.
+Elapsed time =     34 sec.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------

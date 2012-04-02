@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;INST &quot;ddrsp0.ddrc/ddr_phy0/ddr_phy0/xc3se.ddr_phy0/nops.read_dll&quot; LOC = DCM_X1Y3;&gt; [leon3mp.ucf(25)]</arg>: <arg fmt="%s" index="2">INST</arg> &quot;<arg fmt="%s" index="3">ddrsp0.ddrc/ddr_phy0/ddr_phy0/xc3se.ddr_phy0/nops.read_dll</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;INST &quot;ddrsp0.ddrc/ddr_phy0/ddr_phy0/xc3se.ddr_phy0/nops.read_dll&quot; LOC = DCM_X1Y3;&gt; [leon3mp.ucf(25)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;Net sts LOC=B18 ;&gt; [leon3mp.ucf(214)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sts</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;Net sts LOC=B18 ;&gt; [leon3mp.ucf(214)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">ddr_clk_fb</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_ddr_clk_fb</arg>&apos;, was traced into <arg fmt="%s" index="4">DCM_SP</arg> instance <arg fmt="%s" index="5">ddrsp0.ddrc/ddr_phy0/ddr_phy0/xc3se.ddr_phy0/ps.read_dll</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">DCM_SP</arg> output(s): 
+<arg fmt="%s" index="7">CLK90</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_ddrsp0_ddrc_ddr_phy0_ddr_phy0_xc3se_ddr_phy0_rclk90 = PERIOD &quot;ddrsp0_ddrc_ddr_phy0_ddr_phy0_xc3se_ddr_phy0_rclk90&quot; TS_ddr_clk_fb PHASE 4.0625 ns HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="0" >The Period constraint &lt;NET &quot;clk_50mhz&quot; PERIOD = 20ns HIGH 40%;&gt; [leon3mp.ucf(5)], is specified using the Net Period method which is not recommended. Please use the Timespec PERIOD method.
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="0" >The Period constraint &lt;NET erx_clk PERIOD = 40.000 ;&gt; [leon3mp.ucf(7)], is specified using the Net Period method which is not recommended. Please use the Timespec PERIOD method.
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="0" >The Period constraint &lt;NET etx_clk PERIOD = 40.000 ;&gt; [leon3mp.ucf(9)], is specified using the Net Period method which is not recommended. Please use the Timespec PERIOD method.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >The Offset constraint &lt;OFFSET = IN : 10.000 : BEFORE erx_clk ;&gt; [leon3mp.ucf(8)], is specified without a duration.  This will result in a lack of hold time checks in timing reports.  If hold time checks are desired a duration value should be specified following the &apos;VALID&apos; keyword.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >The Offset constraint &lt;OFFSET = IN : 8.000 : BEFORE etx_clk ;&gt; [leon3mp.ucf(11)], is specified without a duration.  This will result in a lack of hold time checks in timing reports.  If hold time checks are desired a duration value should be specified following the &apos;VALID&apos; keyword.
+</msg>
+
+<msg type="info" file="NgdBuild" num="1222" delta="old" >Setting <arg fmt="%s" index="1">CLKIN_PERIOD</arg> attribute associated with <arg fmt="%s" index="2">DCM</arg> instance <arg fmt="%s" index="3">ddrsp0.ddrc/ddr_phy0/ddr_phy0/xc3se.ddr_phy0/ps.read_dll</arg> to <arg fmt="%s" index="4">10.000000</arg> ns based on the period specification (<arg fmt="%s" index="5">&lt;TIMESPEC &quot;TS_ddr_clk_fb&quot; = PERIOD &quot;ddr_clk_fb&quot; 10.00 ns HIGH 50 %;&gt; [leon3mp.ucf(20)]</arg>).
+</msg>
+
+</messages>
+

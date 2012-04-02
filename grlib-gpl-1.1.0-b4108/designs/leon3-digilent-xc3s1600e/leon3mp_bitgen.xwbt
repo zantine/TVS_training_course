@@ -1,0 +1,7 @@
+INFILE=/home/mike/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e/leon3mp.ncd
+OUTFILE=/home/mike/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e/leon3mp.bit
+FAMILY=Spartan3E
+PART=xc3s1600e-4fg320
+WORKINGDIR=/home/mike/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
+LICENSE=WebPack
+USER_INFO=209005295_0_0_819
