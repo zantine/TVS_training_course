@@ -2571,6 +2571,4 @@ run -a
 # ** Failure: *** IU in error mode, simulation halted ***
 #    Time: 1345 us  Iteration: 0  Process: /testbench/iuerr File: testbench.vhd
 # Break in Process iuerr at testbench.vhd line 215
-load world
-# couldn't load file "world": world: cannot open shared object file: No such file or directory
 quit

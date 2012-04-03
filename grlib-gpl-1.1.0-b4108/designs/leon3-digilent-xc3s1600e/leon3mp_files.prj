@@ -207,3 +207,6 @@ vhdl work leon3mp.vhd
 vhdl work config.vhd
 vhdl work ahbrom.vhd
 vhdl work leon3mp.vhd
+vhdl work config.vhd
+vhdl work ahbrom.vhd
+vhdl work leon3mp.vhd
