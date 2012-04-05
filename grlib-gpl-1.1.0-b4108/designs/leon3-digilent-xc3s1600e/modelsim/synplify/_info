@@ -2,12 +2,12 @@ m255
 K3
 13
 cModel Technology
-Z0 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+Z0 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
 Pattributes
 Z1 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
 Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z3 w1309254995
-Z4 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+Z4 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
 8../../lib/synplify/sim/synattr.vhd
 F../../lib/synplify/sim/synattr.vhd
 l0
@@ -16,7 +16,7 @@ V6ezddZdL?6J;PJUj@nOIQ1
 !s100 JRUf97h;dmWjDTKkjWB^32
 Z5 OL;C;10.0b;49
 31
-!s108 1327932241.812778
+!s108 1333645153.170712
 !s90 -quiet|-93|-work|synplify|../../lib/synplify/sim/synattr.vhd|
 !s107 ../../lib/synplify/sim/synattr.vhd|
 Z6 o-quiet -93 -work synplify
@@ -33,7 +33,7 @@ L267
 V=Y[H16Pe`mzH;3LWEV6M_0
 R5
 31
-Z10 !s108 1327932241.735872
+Z10 !s108 1333645153.107731
 Z11 !s90 -quiet|-93|-work|synplify|../../lib/synplify/sim/synplify.vhd|
 Z12 !s107 ../../lib/synplify/sim/synplify.vhd|
 R6

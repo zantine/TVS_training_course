@@ -201,12 +201,3 @@ vhdl gaisler ../../lib/gaisler/ddr/ddr2spax_ahb.vhd
 vhdl gaisler ../../lib/gaisler/ddr/ddr2spax_ddr.vhd
 vhdl esa ../../lib/esa/memoryctrl/memoryctrl.vhd
 vhdl esa ../../lib/esa/memoryctrl/mctrl.vhd
-vhdl work config.vhd
-vhdl work ahbrom.vhd
-vhdl work leon3mp.vhd
-vhdl work config.vhd
-vhdl work ahbrom.vhd
-vhdl work leon3mp.vhd
-vhdl work config.vhd
-vhdl work ahbrom.vhd
-vhdl work leon3mp.vhd

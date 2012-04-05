@@ -2,7 +2,7 @@ m255
 K3
 13
 cModel Technology
-Z0 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+Z0 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
 Eahbrom
 Z1 w1309254993
 Z2 DPx5 grlib 7 devices 0 22 nH[U_@>flN29_7Tnj89QB3
@@ -13,7 +13,7 @@ Z6 DPx4 ieee 11 numeric_std 0 22 k7B<7GmYYYmX;0X]XHFD10
 Z7 DPx5 grlib 4 amba 0 22 lANGVoniT0WO]bYU@YQ0P0
 Z8 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
 Z9 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z10 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+Z10 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
 Z11 8ahbrom.vhd
 Z12 Fahbrom.vhd
 l0
@@ -21,7 +21,7 @@ L26
 VDcFBWiV7Y@5Gj]`SE8oK:2
 Z13 OL;C;10.0b;49
 31
-Z14 !s108 1331743933.231302
+Z14 !s108 1333645184.246349
 Z15 !s90 -quiet|-93|-work|work|ahbrom.vhd|
 Z16 !s107 ahbrom.vhd|
 Z17 o-quiet -93 -work work
@@ -69,7 +69,7 @@ R13
 R17
 R18
 !s100 9Qg^0C_leARYTlzQJ1`eh0
-!s108 1331743933.319482
+!s108 1333645184.182882
 !s90 -quiet|-93|-work|work|config.vhd|
 !s107 config.vhd|
 Ecpu_disas
@@ -87,14 +87,14 @@ Z25 F../../lib/work/debug/cpu_disas.vhd
 l0
 L36
 VI<Cm0T]:lfI[SIQ`9J[AO2
-!s100 4]O[S?WA7eJWZi]FEklKc0
 R13
 31
-Z26 !s108 1331743933.777205
+Z26 !s108 1333645184.129762
 Z27 !s90 -quiet|-93|-work|work|../../lib/work/debug/cpu_disas.vhd|
 Z28 !s107 ../../lib/work/debug/cpu_disas.vhd|
 R17
 R18
+!s100 4]O[S?WA7eJWZi]FEklKc0
 Abehav
 R22
 R23
@@ -103,11 +103,10 @@ R4
 R6
 R8
 R9
-Z29 DEx4 work 9 cpu_disas 0 22 I<Cm0T]:lfI[SIQ`9J[AO2
+DEx4 work 9 cpu_disas 0 22 I<Cm0T]:lfI[SIQ`9J[AO2
 l53
 L52
-Z30 Vm6ZkzLfn7DOSn9:KnK[zc3
-Z31 !s100 z>PXk60BbT5FkRzOj`n6H3
+Vm6ZkzLfn7DOSn9:KnK[zc3
 R13
 31
 R26
@@ -115,6 +114,7 @@ R27
 R28
 R17
 R18
+!s100 z>PXk60BbT5FkRzOj`n6H3
 Pdebug
 R3
 R4
@@ -135,7 +135,7 @@ R13
 R17
 R18
 !s100 >2?o60cYoUCRdY1PWEJzg3
-!s108 1331743933.515261
+!s108 1333645184.020466
 !s90 -quiet|-93|-work|work|../../lib/work/debug/debug.vhd|
 !s107 ../../lib/work/debug/debug.vhd|
 Egaisler_cpu_disas
@@ -153,7 +153,6 @@ R25
 l0
 L89
 V]SYh]]eJe95lU4;ZjmkOC1
-!s100 Rb`nFHH]bTGR0[RaAQ`Si0
 R13
 31
 R26
@@ -161,6 +160,7 @@ R27
 R28
 R17
 R18
+!s100 Rb`nFHH]bTGR0[RaAQ`Si0
 Abehav
 R22
 R23
@@ -169,11 +169,10 @@ R4
 R6
 R8
 R9
-Z32 DEx4 work 17 gaisler_cpu_disas 0 22 ]SYh]]eJe95lU4;ZjmkOC1
+DEx4 work 17 gaisler_cpu_disas 0 22 ]SYh]]eJe95lU4;ZjmkOC1
 l106
 L105
-Z33 Vi<n`cXIi:ZM7;cYk2=BgT1
-Z34 !s100 O^?eUQ9FQNbf[_7jd?iS=3
+Vi<n`cXIi:ZM7;cYk2=BgT1
 R13
 31
 R26
@@ -181,29 +180,30 @@ R27
 R28
 R17
 R18
+!s100 O^?eUQ9FQNbf[_7jd?iS=3
 Egrtestmod
 R21
 R2
 R5
 R7
-Z35 DPx5 grlib 5 stdio 0 22 Q[dN`bfzCngEcfl1NNZhG3
+Z29 DPx5 grlib 5 stdio 0 22 Q[dN`bfzCngEcfl1NNZhG3
 R3
 R6
 R4
-Z36 DPx7 gaisler 3 sim 0 22 X:CR:b[m:_bS6DOc;jB570
+Z30 DPx7 gaisler 3 sim 0 22 X:CR:b[m:_bS6DOc;jB570
 R8
 R9
 R10
-Z37 8../../lib/work/debug/grtestmod.vhd
-Z38 F../../lib/work/debug/grtestmod.vhd
+Z31 8../../lib/work/debug/grtestmod.vhd
+Z32 F../../lib/work/debug/grtestmod.vhd
 l0
 L67
 V7I5jb>^mmPbM;7hf6Ha691
 R13
 31
-Z39 !s108 1331743933.713697
-Z40 !s90 -quiet|-93|-work|work|../../lib/work/debug/grtestmod.vhd|
-Z41 !s107 ../../lib/work/debug/grtestmod.vhd|
+Z33 !s108 1333645184.074816
+Z34 !s90 -quiet|-93|-work|work|../../lib/work/debug/grtestmod.vhd|
+Z35 !s107 ../../lib/work/debug/grtestmod.vhd|
 R17
 R18
 !s100 `E8f[Faf6?7F?XFGnWzb73
@@ -211,36 +211,36 @@ Asim
 R2
 R5
 R7
-R35
+R29
 R3
 R6
 R4
-R36
+R30
 R8
 R9
 DEx4 work 9 grtestmod 0 22 7I5jb>^mmPbM;7hf6Ha691
 l98
 L86
 VWG:aRCN8MN6i8][kz]2][2
-!s100 E14S8M[?:IanSi`C7hCMk1
 R13
 31
-R39
-R40
-R41
+R33
+R34
+R35
 R17
 R18
+!s100 E14S8M[?:IanSi`C7hCMk1
 Eleon3mp
 R1
-Z42 DPx4 work 6 config 0 22 T^j22EPB`0n^KIG[f]B4O2
-Z43 DPx3 esa 10 memoryctrl 0 22 V2Lfz^2eKH>6MoH^UbhjZ1
-Z44 DPx7 gaisler 4 jtag 0 22 VDl:b^nZLzj_njBcA1lPM0
-Z45 DPx7 gaisler 3 net 0 22 [SVaZQIiX?=;<PPZb4SM02
-Z46 DPx7 gaisler 4 misc 0 22 FeJi8@73W?4<[a_N;=`IZ0
-Z47 DPx7 gaisler 4 uart 0 22 0LK`fhLlgI[A2=kG55WQ`0
-Z48 DPx7 gaisler 5 leon3 0 22 PJTV;Uh`OeAE0AB;;Q4Y?3
-Z49 DPx7 gaisler 7 memctrl 0 22 QOj41PHkAc<CeVH<@o5h91
-Z50 DPx7 techmap 9 allclkgen 0 22 AaSoT[JKmeo=8XAI6=nLd1
+Z36 DPx4 work 6 config 0 22 T^j22EPB`0n^KIG[f]B4O2
+Z37 DPx3 esa 10 memoryctrl 0 22 V2Lfz^2eKH>6MoH^UbhjZ1
+Z38 DPx7 gaisler 4 jtag 0 22 VDl:b^nZLzj_njBcA1lPM0
+Z39 DPx7 gaisler 3 net 0 22 [SVaZQIiX?=;<PPZb4SM02
+Z40 DPx7 gaisler 4 misc 0 22 FeJi8@73W?4<[a_N;=`IZ0
+Z41 DPx7 gaisler 4 uart 0 22 0LK`fhLlgI[A2=kG55WQ`0
+Z42 DPx7 gaisler 5 leon3 0 22 PJTV;Uh`OeAE0AB;;Q4Y?3
+Z43 DPx7 gaisler 7 memctrl 0 22 QOj41PHkAc<CeVH<@o5h91
+Z44 DPx7 techmap 9 allclkgen 0 22 AaSoT[JKmeo=8XAI6=nLd1
 R20
 R2
 R3
@@ -251,30 +251,30 @@ R7
 R8
 R9
 R10
-Z51 8leon3mp.vhd
-Z52 Fleon3mp.vhd
+Z45 8leon3mp.vhd
+Z46 Fleon3mp.vhd
 l0
 L44
 V=UoK]R3^bD<A?E05WV8f80
 R13
 31
-Z53 !s108 1331743933.379333
-Z54 !s90 -quiet|-93|-work|work|leon3mp.vhd|
-Z55 !s107 leon3mp.vhd|
+Z47 !s108 1333645184.303083
+Z48 !s90 -quiet|-93|-work|work|leon3mp.vhd|
+Z49 !s107 leon3mp.vhd|
 R17
 R18
 !s100 Mg3mS8L>[RO4`QL]:l8o01
 Artl
 R19
+R36
+R37
+R38
+R39
+R40
+R41
 R42
 R43
 R44
-R45
-R46
-R47
-R48
-R49
-R50
 R20
 R2
 R3
@@ -284,85 +284,85 @@ R6
 R7
 R8
 R9
-Z56 DEx4 work 7 leon3mp 0 22 =UoK]R3^bD<A?E05WV8f80
+Z50 DEx4 work 7 leon3mp 0 22 =UoK]R3^bD<A?E05WV8f80
 l210
 L129
 VCEMlEXQZ^<^eA17Iz7DUF3
 R13
 31
-R53
-R54
-R55
+R47
+R48
+R49
 R17
 R18
 !s100 U^ibCkAc4?l68^koG2lO01
 Etestbench
 R1
-Z57 DPx4 work 5 debug 0 22 6TmD53N2fhNk?F41i791@3
-R42
-Z58 DPx6 micron 10 components 0 22 =JJh5SFR::3L4R9jTl01=0
-R35
+Z51 DPx4 work 5 debug 0 22 6TmD53N2fhNk?F41i791@3
 R36
+Z52 DPx6 micron 10 components 0 22 =JJh5SFR::3L4R9jTl01=0
+R29
+R30
 R20
 R2
-R46
-R47
+R40
+R41
 R3
 R4
 R5
 R6
 R7
-Z59 DPx7 gaisler 7 libdcom 0 22 [:Kek<o_alDD?13_KmRgL3
+Z53 DPx7 gaisler 7 libdcom 0 22 [:Kek<o_alDD?13_KmRgL3
 R8
 R9
 R10
-Z60 8testbench.vhd
-Z61 Ftestbench.vhd
+Z54 8testbench.vhd
+Z55 Ftestbench.vhd
 l0
 L41
 V]MnW]1k6mWfWb<S:5E6LQ3
+!s100 e[Eg`g8ZPA0@omWm4Z9Km1
 R13
 31
-Z62 !s108 1331743933.603893
-Z63 !s90 -quiet|-93|-work|work|testbench.vhd|
-Z64 !s107 testbench.vhd|
+Z56 !s108 1333645184.401210
+Z57 !s90 -quiet|-93|-work|work|testbench.vhd|
+Z58 !s107 testbench.vhd|
 R17
 R18
-!s100 e[Eg`g8ZPA0@omWm4Z9Km1
 Abehav
+R37
+R38
+R39
+R42
 R43
 R44
-R45
-R48
-R49
 R50
-R56
-R57
-R42
-R58
-R35
+R51
 R36
+R52
+R29
+R30
 R20
 R2
-R46
-R47
+R40
+R41
 R3
 R4
 R5
 R6
 R7
-R59
+R53
 R8
 R9
 DEx4 work 9 testbench 0 22 ]MnW]1k6mWfWb<S:5E6LQ3
 l124
 L60
 V:Y5o2zaRFI>0[HS<f6B8W0
+!s100 P3`6[1YbKVzMaBSUi?W1H2
 R13
 31
-R62
-R63
-R64
+R56
+R57
+R58
 R17
 R18
-!s100 P3`6[1YbKVzMaBSUi?W1H2

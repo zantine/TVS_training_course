@@ -2,7 +2,7 @@ m255
 K3
 13
 cModel Technology
-Z0 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+Z0 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
 Pcomponents
 Z1 DPx5 grlib 7 version 0 22 1m_Cgoejn7LU6]zafCACE0
 Z2 DPx4 ieee 11 numeric_std 0 22 k7B<7GmYYYmX;0X]XHFD10
@@ -11,20 +11,20 @@ Z4 DPx4 work 17 hy5ps121621f_pack 0 22 lND=QV;moQQ@_3I@zGZkL0
 Z5 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
 Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z7 w1309254995
-Z8 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+Z8 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
 8../../lib/hynix/ddr2/components.vhd
 F../../lib/hynix/ddr2/components.vhd
 l0
 L26
 ViRDL]A;oT:`K?KnBIahY>0
+!s100 dSaioG[:<aELm72cPHg<h1
 Z9 OL;C;10.0b;49
 31
-Z10 o-quiet -93 -work hynix
-Z11 tShow_source 1 Show_Warning1 0 Show_Warning5 0 Explicit 1 Quiet 1
-!s100 dSaioG[:<aELm72cPHg<h1
-!s108 1327932277.184377
+!s108 1333645183.323928
 !s90 -quiet|-93|-work|hynix|../../lib/hynix/ddr2/components.vhd|
 !s107 ../../lib/hynix/ddr2/components.vhd|
+Z10 o-quiet -93 -work hynix
+Z11 tShow_source 1 Show_Warning1 0 Show_Warning5 0 Explicit 1 Quiet 1
 Ehy5ps121621f
 R7
 R4
@@ -44,14 +44,14 @@ Z18 F../../lib/hynix/ddr2/HY5PS121621F.vhd
 l0
 L30
 V^a09KTo]aa1XMdLXRgU1j1
-!s100 4o3RM1PRi<B2J`^<lbTP^3
 R9
 31
-Z19 !s108 1331743932.693755
+Z19 !s108 1333645183.191985
 Z20 !s90 -quiet|-93|-work|hynix|../../lib/hynix/ddr2/HY5PS121621F.vhd|
 Z21 !s107 ../../lib/hynix/ddr2/HY5PS121621F.vhd|
 R10
 R11
+!s100 4o3RM1PRi<B2J`^<lbTP^3
 Abehavioral_model_hy5ps121621f
 R4
 R12
@@ -64,11 +64,10 @@ R2
 R3
 R5
 R6
-Z22 DEx4 work 12 hy5ps121621f 0 22 ^a09KTo]aa1XMdLXRgU1j1
+DEx4 work 12 hy5ps121621f 0 22 ^a09KTo]aa1XMdLXRgU1j1
 l234
 L59
-Z23 VXSIABW:OZI`Q1@MW61X4I1
-Z24 !s100 :SEdci[A]mc6Q7D@78KQ`0
+VXSIABW:OZI`Q1@MW61X4I1
 R9
 31
 R19
@@ -76,6 +75,7 @@ R20
 R21
 R10
 R11
+!s100 :SEdci[A]mc6Q7D@78KQ`0
 Phy5ps121621f_pack
 R1
 R2
@@ -84,17 +84,17 @@ R5
 R6
 R7
 R8
-Z25 8../../lib/hynix/ddr2/HY5PS121621F_PACK.vhd
-Z26 F../../lib/hynix/ddr2/HY5PS121621F_PACK.vhd
+Z22 8../../lib/hynix/ddr2/HY5PS121621F_PACK.vhd
+Z23 F../../lib/hynix/ddr2/HY5PS121621F_PACK.vhd
 l0
 L24
 VlND=QV;moQQ@_3I@zGZkL0
 R9
 31
 b1
-Z27 !s108 1327932276.951943
-Z28 !s90 -quiet|-93|-work|hynix|../../lib/hynix/ddr2/HY5PS121621F_PACK.vhd|
-Z29 !s107 ../../lib/hynix/ddr2/HY5PS121621F_PACK.vhd|
+Z24 !s108 1333645183.110541
+Z25 !s90 -quiet|-93|-work|hynix|../../lib/hynix/ddr2/HY5PS121621F_PACK.vhd|
+Z26 !s107 ../../lib/hynix/ddr2/HY5PS121621F_PACK.vhd|
 R10
 R11
 !s100 F<LjS:PjH8H[EgLUOHRe_2
@@ -110,9 +110,9 @@ L242
 V<n<LizLJa=Oi^zRRS;PW01
 R9
 31
-R27
-R28
-R29
+R24
+R25
+R26
 R10
 R11
 nbody

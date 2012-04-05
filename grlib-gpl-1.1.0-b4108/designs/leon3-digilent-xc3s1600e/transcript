@@ -2565,10 +2565,12 @@ run -a
 #   timer 1
 #   timer 2
 #   chain mode
+# General Purpose I/O port       
+#   IN, OUT and DIR registers
 # Generic UART                   
 # Test passed, halting with IU error mode
 # 
 # ** Failure: *** IU in error mode, simulation halted ***
-#    Time: 1345 us  Iteration: 0  Process: /testbench/iuerr File: /home/mike/grlib/designs/leon3-digilent-xc3s1600e/testbench.vhd
-# Break in Process iuerr at /home/mike/grlib/designs/leon3-digilent-xc3s1600e/testbench.vhd line 215
+#    Time: 1360 us  Iteration: 0  Process: /testbench/iuerr File: testbench.vhd
+# Break in Process iuerr at testbench.vhd line 215
 quit

@@ -2,13 +2,13 @@ m255
 K3
 13
 cModel Technology
-Z0 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+Z0 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
 Eadd32
 Z1 w1309254994
 Z2 DPx5 grlib 6 blocks 0 22 2<B]S=F`W8g=XMU4jncPU3
 Z3 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
 Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z5 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+Z5 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
 Z6 8../../lib/grlib/modgen/leaves.vhd
 Z7 F../../lib/grlib/modgen/leaves.vhd
 l0
@@ -16,7 +16,7 @@ L24025
 V5cA<]YY>J]mGT2BNVKj563
 Z8 OL;C;10.0b;49
 31
-Z9 !s108 1327932237.578803
+Z9 !s108 1333645150.111249
 Z10 !s90 -quiet|-93|-work|grlib|../../lib/grlib/modgen/leaves.vhd|
 Z11 !s107 ../../lib/grlib/modgen/leaves.vhd|
 Z12 o-quiet -93 -work grlib
@@ -54,14 +54,14 @@ Z21 F../../lib/grlib/amba/ahbctrl.vhd
 l0
 L37
 VONW<bzbhGSW__<5>g6Om11
-!s100 B;2F0Q^giG:H8E<G`^ldk2
 R8
 31
-Z22 !s108 1331743907.487857
+Z22 !s108 1333645150.937789
 Z23 !s90 -quiet|-93|-work|grlib|../../lib/grlib/amba/ahbctrl.vhd|
 Z24 !s107 ../../lib/grlib/amba/ahbctrl.vhd|
 R12
 R13
+!s100 B;2F0Q^giG:H8E<G`^ldk2
 Artl
 Z25 DPx5 grlib 5 stdio 0 22 Q[dN`bfzCngEcfl1NNZhG3
 Z26 DPx4 ieee 9 math_real 0 22 :iME`dTX54_U49lJNF5JI3
@@ -74,11 +74,10 @@ R18
 R19
 R3
 R4
-Z28 DEx4 work 7 ahbctrl 0 22 ONW<bzbhGSW__<5>g6Om11
+DEx4 work 7 ahbctrl 0 22 ONW<bzbhGSW__<5>g6Om11
 l343
 L83
-Z29 V@:<=:n<;fa_zR4HEf>1z=1
-Z30 !s100 c<W`IWM9EAoCBlmo3MbIZ0
+V@:<=:n<;fa_zR4HEf>1z=1
 R8
 31
 R22
@@ -86,6 +85,7 @@ R23
 R24
 R12
 R13
+!s100 c<W`IWM9EAoCBlmo3MbIZ0
 Eahbdefmst
 R1
 R15
@@ -96,16 +96,16 @@ R19
 R3
 R4
 R5
-Z31 8../../lib/grlib/amba/defmst.vhd
-Z32 F../../lib/grlib/amba/defmst.vhd
+Z28 8../../lib/grlib/amba/defmst.vhd
+Z29 F../../lib/grlib/amba/defmst.vhd
 l0
 L33
 Vmf^6eN@o6GnDJ?=l3f:YX1
 R8
 31
-Z33 !s108 1331743907.420885
-Z34 !s90 -quiet|-93|-work|grlib|../../lib/grlib/amba/defmst.vhd|
-Z35 !s107 ../../lib/grlib/amba/defmst.vhd|
+Z30 !s108 1333645150.838221
+Z31 !s90 -quiet|-93|-work|grlib|../../lib/grlib/amba/defmst.vhd|
+Z32 !s107 ../../lib/grlib/amba/defmst.vhd|
 R12
 R13
 !s100 GX9EOJ2`Fj=V<HgW?828^2
@@ -121,14 +121,14 @@ DEx4 work 9 ahbdefmst 0 22 mf^6eN@o6GnDJ?=l3f:YX1
 l40
 L39
 VlRd?ol><CIPj?b]lf@M>82
-!s100 73egXf4BG_9UnfU4CCHzX2
 R8
 31
-R33
-R34
-R35
+R30
+R31
+R32
 R12
 R13
+!s100 73egXf4BG_9UnfU4CCHzX2
 Pamba
 R17
 R19
@@ -138,17 +138,17 @@ R3
 R4
 R1
 R5
-Z36 8../../lib/grlib/amba/amba.vhd
-Z37 F../../lib/grlib/amba/amba.vhd
+Z33 8../../lib/grlib/amba/amba.vhd
+Z34 F../../lib/grlib/amba/amba.vhd
 l0
 L37
 VlANGVoniT0WO]bYU@YQ0P0
 R8
 31
 b1
-Z38 !s108 1331743906.132728
-Z39 !s90 -quiet|-93|-work|grlib|../../lib/grlib/amba/amba.vhd|
-Z40 !s107 ../../lib/grlib/amba/amba.vhd|
+Z35 !s108 1333645150.653539
+Z36 !s90 -quiet|-93|-work|grlib|../../lib/grlib/amba/amba.vhd|
+Z37 !s107 ../../lib/grlib/amba/amba.vhd|
 R12
 R13
 !s100 U^D]DKXHFcl3AGB[g99S<3
@@ -165,9 +165,9 @@ L590
 V>OF7iMUeUlbLIQcHi_H:81
 R8
 31
-R38
-R39
-R40
+R35
+R36
+R37
 R12
 R13
 nbody
@@ -183,20 +183,20 @@ R4
 R3
 R1
 R5
-Z41 8../../lib/grlib/amba/amba_tp.vhd
-Z42 F../../lib/grlib/amba/amba_tp.vhd
+Z38 8../../lib/grlib/amba/amba_tp.vhd
+Z39 F../../lib/grlib/amba/amba_tp.vhd
 l0
 L72
 VEA2;^2d0OK@<Nhz=7kbCM1
+!s100 >X=?2gjK6;UhedhZ:iO363
 R8
 31
 b1
-Z43 !s108 1331743907.333101
-Z44 !s90 -quiet|-93|-work|grlib|../../lib/grlib/amba/amba_tp.vhd|
-Z45 !s107 ../../lib/grlib/amba/amba_tp.vhd|
+Z40 !s108 1333645151.215540
+Z41 !s90 -quiet|-93|-work|grlib|../../lib/grlib/amba/amba_tp.vhd|
+Z42 !s107 ../../lib/grlib/amba/amba_tp.vhd|
 R12
 R13
-!s100 >X=?2gjK6;UhedhZ:iO363
 Bbody
 DPx4 work 16 amba_testpackage 0 22 EA2;^2d0OK@<Nhz=7kbCM1
 R25
@@ -210,15 +210,15 @@ R3
 l0
 L363
 V6AdT:EczC3g<F:iU3Nk1X0
+!s100 >h10D?_?zM;bMGlmg^X^:0
 R8
 31
-R43
-R44
-R45
+R40
+R41
+R42
 R12
 R13
 nbody
-!s100 >h10D?_?zM;bMGlmg^X^:0
 Eapbctrl
 R1
 R14
@@ -230,16 +230,16 @@ R16
 R3
 R4
 R5
-Z46 8../../lib/grlib/amba/apbctrl.vhd
-Z47 F../../lib/grlib/amba/apbctrl.vhd
+Z43 8../../lib/grlib/amba/apbctrl.vhd
+Z44 F../../lib/grlib/amba/apbctrl.vhd
 l0
 L43
 VeP[iPBh?5YBMgXhA?JFhO0
 R8
 31
-Z48 !s108 1331743907.262820
-Z49 !s90 -quiet|-93|-work|grlib|../../lib/grlib/amba/apbctrl.vhd|
-Z50 !s107 ../../lib/grlib/amba/apbctrl.vhd|
+Z45 !s108 1333645150.881785
+Z46 !s90 -quiet|-93|-work|grlib|../../lib/grlib/amba/apbctrl.vhd|
+Z47 !s107 ../../lib/grlib/amba/apbctrl.vhd|
 R12
 R13
 !s100 ?Q^i<2S9zj2;3UcMdG?5X0
@@ -258,9 +258,9 @@ L68
 VLAm]@hWQEGn?]JCak]hWQ2
 R8
 31
-R48
-R49
-R50
+R45
+R46
+R47
 R12
 R13
 !s100 Te7>?nZz4fGe9XZOIeOA?0
@@ -602,35 +602,35 @@ R8
 R12
 R13
 !s100 7n:jJ6?]_lZ5d`J9D>naF1
-!s108 1327932236.899839
+!s108 1333645149.607141
 !s90 -quiet|-93|-work|grlib|../../lib/grlib/stdlib/config.vhd|
 !s107 ../../lib/grlib/stdlib/config.vhd|
 Ecpu_disas
 R1
-Z51 DPx5 grlib 11 sparc_disas 0 22 GMF;mR6WJYGQ;JcD`i4B?0
-Z52 DPx5 grlib 5 sparc 0 22 hC_RIKK=1WRDa?kTiEl491
+Z48 DPx5 grlib 11 sparc_disas 0 22 GMF;mR6WJYGQ;JcD`i4B?0
+Z49 DPx5 grlib 5 sparc 0 22 hC_RIKK=1WRDa?kTiEl491
 R17
 R18
 R19
 R3
 R4
 R5
-Z53 8../../lib/grlib/sparc/cpu_disas.vhd
-Z54 F../../lib/grlib/sparc/cpu_disas.vhd
+Z50 8../../lib/grlib/sparc/cpu_disas.vhd
+Z51 F../../lib/grlib/sparc/cpu_disas.vhd
 l0
 L35
 VG7ig89HZ4M;0MQ0]ZDoJS0
 R8
 31
-Z55 !s108 1331743906.045961
-Z56 !s90 -quiet|-93|-work|grlib|../../lib/grlib/sparc/cpu_disas.vhd|
-Z57 !s107 ../../lib/grlib/sparc/cpu_disas.vhd|
+Z52 !s108 1333645150.020605
+Z53 !s90 -quiet|-93|-work|grlib|../../lib/grlib/sparc/cpu_disas.vhd|
+Z54 !s107 ../../lib/grlib/sparc/cpu_disas.vhd|
 R12
 R13
 !s100 96KM4`SAgPeKe2Q[8_>8B2
 Abehav
-R51
-R52
+R48
+R49
 R17
 R18
 R19
@@ -642,9 +642,9 @@ L52
 VdLod>To?lfF1VoQ;Mzok?3
 R8
 31
-R55
-R56
-R57
+R52
+R53
+R54
 R12
 R13
 !s100 d::P[a<PXkf>1mSjbFCC?2
@@ -1541,12 +1541,12 @@ R8
 R12
 R13
 !s100 h=99AdmEf3h^OJUYVfVj30
-!s108 1331743906.472061
+!s108 1333645150.718182
 !s90 -quiet|-93|-work|grlib|../../lib/grlib/amba/devices.vhd|
 !s107 ../../lib/grlib/amba/devices.vhd|
 Edma2ahb
 R1
-Z58 DPx5 grlib 15 dma2ahb_package 0 22 GF]OWKG5dgSH@dL?z>HFC3
+Z55 DPx5 grlib 15 dma2ahb_package 0 22 GF]OWKG5dgSH@dL?z>HFC3
 R17
 R19
 R15
@@ -1555,21 +1555,21 @@ R16
 R3
 R4
 R5
-Z59 8../../lib/grlib/amba/dma2ahb.vhd
-Z60 F../../lib/grlib/amba/dma2ahb.vhd
+Z56 8../../lib/grlib/amba/dma2ahb.vhd
+Z57 F../../lib/grlib/amba/dma2ahb.vhd
 l0
 L107
 VIJok4j4hM2Mmb=cnL8P?53
 R8
 31
-Z61 !s108 1331743906.413546
-Z62 !s90 -quiet|-93|-work|grlib|../../lib/grlib/amba/dma2ahb.vhd|
-Z63 !s107 ../../lib/grlib/amba/dma2ahb.vhd|
+Z58 !s108 1333645151.066451
+Z59 !s90 -quiet|-93|-work|grlib|../../lib/grlib/amba/dma2ahb.vhd|
+Z60 !s107 ../../lib/grlib/amba/dma2ahb.vhd|
 R12
 R13
 !s100 ^6;6K^b<b474z02?i`=<d2
 Artl
-R58
+R55
 R17
 R19
 R15
@@ -1583,9 +1583,9 @@ L131
 V[XZ9`P5N0nf5LCkz:5ZPS1
 R8
 31
-R61
-R62
-R63
+R58
+R59
+R60
 R12
 R13
 !s100 [m7T>ghnCLhSoFQ=;G:8`3
@@ -1609,11 +1609,11 @@ R8
 R12
 R13
 !s100 Dk>U]EG4QR2m<D`dVIP662
-!s108 1331743906.239531
+!s108 1333645151.019792
 !s90 -quiet|-93|-work|grlib|../../lib/grlib/amba/dma2ahb_pkg.vhd|
 !s107 ../../lib/grlib/amba/dma2ahb_pkg.vhd|
 Pdma2ahb_testpackage
-R58
+R55
 R25
 R17
 R19
@@ -1624,23 +1624,23 @@ R3
 R4
 R1
 R5
-Z64 8../../lib/grlib/amba/dma2ahb_tp.vhd
-Z65 F../../lib/grlib/amba/dma2ahb_tp.vhd
+Z61 8../../lib/grlib/amba/dma2ahb_tp.vhd
+Z62 F../../lib/grlib/amba/dma2ahb_tp.vhd
 l0
 L83
 VM@Y[W6I`:l2nbLZLVXDia0
 R8
 31
 b1
-Z66 !s108 1331743906.290468
-Z67 !s90 -quiet|-93|-work|grlib|../../lib/grlib/amba/dma2ahb_tp.vhd|
-Z68 !s107 ../../lib/grlib/amba/dma2ahb_tp.vhd|
+Z63 !s108 1333645151.113018
+Z64 !s90 -quiet|-93|-work|grlib|../../lib/grlib/amba/dma2ahb_tp.vhd|
+Z65 !s107 ../../lib/grlib/amba/dma2ahb_tp.vhd|
 R12
 R13
 !s100 j;aOij[2FNHOaL[No:a580
 Bbody
 DPx4 work 19 dma2ahb_testpackage 0 22 M@Y[W6I`:l2nbLZLVXDia0
-R58
+R55
 R25
 R17
 R19
@@ -1654,9 +1654,9 @@ L407
 VIa^;XHBI@XXinYfa9Ri[H1
 R8
 31
-R66
-R67
-R68
+R63
+R64
+R65
 R12
 R13
 nbody
@@ -1696,30 +1696,30 @@ R13
 !s100 G]9S1V6gfbgz^TdDFcKNo0
 Efpu_disas
 R1
-R51
-R52
+R48
+R49
 R17
 R18
 R19
 R3
 R4
 R5
-R53
-R54
+R50
+R51
 l0
 L86
 VKkz_a2BD<JC4h3RYULdfW2
 R8
 31
-R55
-R56
-R57
+R52
+R53
+R54
 R12
 R13
 !s100 63z>f:PND;=6_7WgXGA:>2
 Abehav
-R51
-R52
+R48
+R49
 R17
 R18
 R19
@@ -1731,9 +1731,9 @@ L108
 Vk53GY]L9YZ0nVQKKkEkXa0
 R8
 31
-R55
-R56
-R57
+R52
+R53
+R54
 R12
 R13
 !s100 8B]nj<CMI:mQ;eMHO9iSN3
@@ -2131,7 +2131,7 @@ R8
 R12
 R13
 !s100 F=X4]Gh3MeG<TYBa1o3PT2
-!s108 1327932237.535894
+!s108 1333645150.081000
 !s90 -quiet|-93|-work|grlib|../../lib/grlib/modgen/multlib.vhd|
 !s107 ../../lib/grlib/modgen/multlib.vhd|
 Epp_high
@@ -2379,16 +2379,16 @@ R19
 R3
 R4
 R5
-Z69 8../../lib/grlib/util/util.vhd
-Z70 F../../lib/grlib/util/util.vhd
+Z66 8../../lib/grlib/util/util.vhd
+Z67 F../../lib/grlib/util/util.vhd
 l0
 L33
 Ve4;mTegi4lShkaneK3mm23
 R8
 31
-Z71 !s108 1331743905.919057
-Z72 !s90 -quiet|-93|-work|grlib|../../lib/grlib/util/util.vhd|
-Z73 !s107 ../../lib/grlib/util/util.vhd|
+Z68 !s108 1333645149.845403
+Z69 !s90 -quiet|-93|-work|grlib|../../lib/grlib/util/util.vhd|
+Z70 !s107 ../../lib/grlib/util/util.vhd|
 R12
 R13
 !s100 CFR?GB;PFUUn_^Mm[>gZ22
@@ -2404,9 +2404,9 @@ L37
 V=H?F>OA1Ec1RNVJ`3R47_1
 R8
 31
-R71
-R72
-R73
+R68
+R69
+R70
 R12
 R13
 !s100 @40F0]4H788G@DTL=n17M3
@@ -2425,11 +2425,11 @@ R8
 R12
 R13
 !s100 2HfLKUHGza_9iAA1;OcL30
-!s108 1327932237.347397
+!s108 1333645149.892884
 !s90 -quiet|-93|-work|grlib|../../lib/grlib/sparc/sparc.vhd|
 !s107 ../../lib/grlib/sparc/sparc.vhd|
 Psparc_disas
-R52
+R49
 R17
 R19
 R18
@@ -2437,17 +2437,17 @@ R3
 R4
 R1
 R5
-Z74 8../../lib/grlib/sparc/sparc_disas.vhd
-Z75 F../../lib/grlib/sparc/sparc_disas.vhd
+Z71 8../../lib/grlib/sparc/sparc_disas.vhd
+Z72 F../../lib/grlib/sparc/sparc_disas.vhd
 l0
 L36
 VGMF;mR6WJYGQ;JcD`i4B?0
 R8
 31
 b1
-Z76 !s108 1331743905.378228
-Z77 !s90 -quiet|-93|-work|grlib|../../lib/grlib/sparc/sparc_disas.vhd|
-Z78 !s107 ../../lib/grlib/sparc/sparc_disas.vhd|
+Z73 !s108 1333645149.934209
+Z74 !s90 -quiet|-93|-work|grlib|../../lib/grlib/sparc/sparc_disas.vhd|
+Z75 !s107 ../../lib/grlib/sparc/sparc_disas.vhd|
 R12
 R13
 !s100 ni?=LA^WTY6fVDo_@IM]63
@@ -2456,7 +2456,7 @@ R25
 R26
 R27
 DPx4 work 11 sparc_disas 0 22 GMF;mR6WJYGQ;JcD`i4B?0
-R52
+R49
 R17
 R19
 R18
@@ -2467,9 +2467,9 @@ L46
 VWDf5OgNWi`S<F=0>514D<1
 R8
 31
-R76
-R77
-R78
+R73
+R74
+R75
 R12
 R13
 nbody
@@ -2479,17 +2479,17 @@ R4
 R3
 R1
 R5
-Z79 8../../lib/grlib/stdlib/stdio.vhd
-Z80 F../../lib/grlib/stdlib/stdio.vhd
+Z76 8../../lib/grlib/stdlib/stdio.vhd
+Z77 F../../lib/grlib/stdlib/stdio.vhd
 l0
 L35
 VQ[dN`bfzCngEcfl1NNZhG3
 R8
 31
 b1
-Z81 !s108 1327932237.149341
-Z82 !s90 -quiet|-93|-work|grlib|../../lib/grlib/stdlib/stdio.vhd|
-Z83 !s107 ../../lib/grlib/stdlib/stdio.vhd|
+Z78 !s108 1333645149.726374
+Z79 !s90 -quiet|-93|-work|grlib|../../lib/grlib/stdlib/stdio.vhd|
+Z80 !s107 ../../lib/grlib/stdlib/stdio.vhd|
 R12
 R13
 !s100 EfSH;hiHOBS6?Gz5bi[492
@@ -2502,9 +2502,9 @@ L77
 VCIEYaGn4Qj7[hSzHX<k;:1
 R8
 31
-R81
-R82
-R83
+R78
+R79
+R80
 R12
 R13
 nbody
@@ -2516,17 +2516,17 @@ R3
 R4
 R1
 R5
-Z84 8../../lib/grlib/stdlib/stdlib.vhd
-Z85 F../../lib/grlib/stdlib/stdlib.vhd
+Z81 8../../lib/grlib/stdlib/stdlib.vhd
+Z82 F../../lib/grlib/stdlib/stdlib.vhd
 l0
 L35
 VaUG_c=:Dze031IULUIQkE1
 R8
 31
 b1
-Z86 !s108 1327932236.974446
-Z87 !s90 -quiet|-93|-work|grlib|../../lib/grlib/stdlib/stdlib.vhd|
-Z88 !s107 ../../lib/grlib/stdlib/stdlib.vhd|
+Z83 !s108 1333645149.648011
+Z84 !s90 -quiet|-93|-work|grlib|../../lib/grlib/stdlib/stdlib.vhd|
+Z85 !s107 ../../lib/grlib/stdlib/stdlib.vhd|
 R12
 R13
 !s100 `hn2L:Z7^ROOZmn>zPnQ;1
@@ -2541,9 +2541,9 @@ L119
 VlYLS30]4X75jB:cjfY0HC3
 R8
 31
-R86
-R87
-R88
+R83
+R84
+R85
 R12
 R13
 nbody
@@ -2558,17 +2558,17 @@ R4
 R3
 R1
 R5
-Z89 8../../lib/grlib/stdlib/testlib.vhd
-Z90 F../../lib/grlib/stdlib/testlib.vhd
+Z86 8../../lib/grlib/stdlib/testlib.vhd
+Z87 F../../lib/grlib/stdlib/testlib.vhd
 l0
 L39
 VDW7D1Kj05^YiE8bcU[cQ;2
 R8
 31
 b1
-Z91 !s108 1327932237.198383
-Z92 !s90 -quiet|-93|-work|grlib|../../lib/grlib/stdlib/testlib.vhd|
-Z93 !s107 ../../lib/grlib/stdlib/testlib.vhd|
+Z88 !s108 1333645149.767313
+Z89 !s90 -quiet|-93|-work|grlib|../../lib/grlib/stdlib/testlib.vhd|
+Z90 !s107 ../../lib/grlib/stdlib/testlib.vhd|
 R12
 R13
 !s100 KV8IHnE8TcW8PjkARFIiX0
@@ -2586,9 +2586,9 @@ L223
 Vz69^A9geYY7kSAKa056lZ0
 R8
 31
-R91
-R92
-R93
+R88
+R89
+R90
 R12
 R13
 nbody
@@ -2607,7 +2607,7 @@ R8
 R12
 R13
 !s100 1N3EFUf?0h^@c[YN]Fbg90
-!s108 1327932236.562290
+!s108 1333645149.505803
 !s90 -quiet|-93|-work|grlib|../../lib/grlib/stdlib/version.vhd|
 !s107 ../../lib/grlib/stdlib/version.vhd|
 Ewallace_18_18

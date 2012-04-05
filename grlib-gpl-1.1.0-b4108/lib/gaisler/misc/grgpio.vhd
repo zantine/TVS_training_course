@@ -276,7 +276,8 @@ begin
 
 -- interrupt filtering and routing
 
-    xirq := (others => '0'); tmp2 := (others => '0');
+    xirq := (others => '0');
+--    xirq := (others => '0'); tmp2 := (others => '0');
 --    if (imask /= 0) then
 --      tmp2(nbits-1 downto 0) := r.din2;
 --      for i in 0 to nbits-1 loop
