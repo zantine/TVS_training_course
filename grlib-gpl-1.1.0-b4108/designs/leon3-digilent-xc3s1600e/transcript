@@ -1,4 +1,4 @@
-# //  ModelSim SE-64 10.0b May  5 2011 Linux 2.6.32-220.4.1.el6.x86_64
+# //  ModelSim SE-64 10.0b May  5 2011 Linux 2.6.32-220.7.1.el6.x86_64
 # //
 # //  Copyright 1991-2011 Mentor Graphics Corporation
 # //  All Rights Reserved.
@@ -2569,6 +2569,6 @@ run -a
 # Test passed, halting with IU error mode
 # 
 # ** Failure: *** IU in error mode, simulation halted ***
-#    Time: 1345 us  Iteration: 0  Process: /testbench/iuerr File: testbench.vhd
-# Break in Process iuerr at testbench.vhd line 215
+#    Time: 1345 us  Iteration: 0  Process: /testbench/iuerr File: /home/mike/grlib/designs/leon3-digilent-xc3s1600e/testbench.vhd
+# Break in Process iuerr at /home/mike/grlib/designs/leon3-digilent-xc3s1600e/testbench.vhd line 215
 quit
