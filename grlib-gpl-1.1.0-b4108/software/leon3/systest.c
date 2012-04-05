@@ -11,6 +11,7 @@ main()
 	irqtest(0x80000200);
 	apbuart_test(0x80000100);
 	gptimer_test(0x80000300);
+        gpio_fifo_test(0x80000b00);
 
 */
 

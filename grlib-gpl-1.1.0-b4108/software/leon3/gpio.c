@@ -7,6 +7,7 @@
  * This file contains two test functions:
  *
  * gpio_test() is the simple traditional system test
+ * gpio_fifo_test() is a simple test of data loopback
  *
  * gpio_test_irq() also tests interrupt generation 
  *
@@ -28,6 +29,44 @@ static volatile int *pio;
  * pio[8] = irqmap
  */
 
+int gpio_fifo_test(int addr) 
+{
+        pio = (int *) addr; 
+        /*
+         * pio[0] = din
+         * pio[1] = dout
+         */
+
+        int mask;
+        int width;
+        int value;
+        
+	report_device(0x0101a000);
+        pio[1] = 0;
+  
+        report_subtest(1);
+
+        /* determine port width and mask */
+        mask = 0;
+        width = 0;
+        value = 0;
+        
+	pio[1] = 0xFFFFFFFF;
+
+        value = pio[0];
+
+        while( ((value >> width) & 1) && (width <= 32)) {
+                mask = mask | (1 << width);
+                width++;
+        }
+        
+        pio[1] = 0;
+        if( (pio[0] & mask) != 0) fail(1);  
+        pio[1] = 0x89ABCDEF;
+        if( (pio[0] & mask) != (0x89ABCDEF & mask)) fail(2);
+
+        return width;
+}
 
 int gpio_test(int addr) 
 {
