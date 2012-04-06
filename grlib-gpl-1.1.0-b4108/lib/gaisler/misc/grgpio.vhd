@@ -99,36 +99,22 @@ type fifo is record
 
 signal r, rin : registers;
 signal f, fin : fifo;
-signal arst     : std_ulogic;
+signal dout   : std_logic_vector(31 downto 0);
+signal arst   : std_ulogic;
 
 begin
 
   arst <= apbi.testrst when (scantest = 1) and (apbi.testen = '1') else rst;
   
-  
---  comb : process(rst, r, f, apbi, gpioi)
-  comb : process(rst, r, f, apbi)
-    variable readdata, dout, pval : std_logic_vector(31 downto 0);
-  variable v : registers;
+actfifo : process(rst, f, apbi)
   variable w : fifo;
-  variable xirq : std_logic_vector(NAHBIRQ-1 downto 0);
   begin
 
-    dout := (others => '0');
-    dout(nbits-1 downto 0) := f.dout(nbits-1 downto 0);
-    v := r; w := f; v.din2 := r.din1; v.din1 := dout(nbits-1 downto 0);  -- loop back dout to din
-
--- read registers
-    readdata := (others => '0');
-    case apbi.paddr(5 downto 2) is
-    when "0000" => readdata(nbits-1 downto 0) := r.din2;
-    when "0001" => readdata(nbits-1 downto 0) := f.dout;
-    when others =>
-      null;
-    end case;
+    dout <= (others => '0');
+    dout(nbits-1 downto 0) <= f.dout(nbits-1 downto 0);
+    w := f; 
 
 -- write registers
-
     if (apbi.psel(pindex) and apbi.penable and apbi.pwrite) = '1' then
       case apbi.paddr(5 downto 2) is
       when "0000" => null;
@@ -138,6 +124,37 @@ begin
       end case;
     end if;
 
+    if rst = '0' then
+      w.dout := (others => '0');
+    end if;
+    
+    fin <= w;
+
+  end process;
+
+  regsfifo : process(clk, arst)
+  begin
+    if rising_edge(clk) then f <= fin; end if;
+  end process;
+
+  actgpio : process(rst, r, f, apbi, dout)
+  variable readdata, pval : std_logic_vector(31 downto 0);
+  variable v : registers;
+  variable xirq : std_logic_vector(NAHBIRQ-1 downto 0);
+  begin
+
+    v := r; v.din2 := r.din1;
+    v.din1 := dout(nbits-1 downto 0);  -- loop back dout to din
+
+-- read registers
+    readdata := (others => '0');
+    case apbi.paddr(5 downto 2) is
+    when "0000" => readdata(nbits-1 downto 0) := r.din2;
+    when "0001" => readdata(nbits-1 downto 0) := dout(nbits-1 downto 0);
+    when others =>
+      null;
+    end case;
+
 -- interrupt filtering and routing
     xirq := (others => '0');
 
@@ -145,22 +162,14 @@ begin
 
    pval := (others => '0');
    pval(nbits-1 downto 0) := r.din2;
-
-    if rst = '0' then
-      w.dout := (others => '0');
-    end if;
     
     rin <= v;
-    fin <= w;
 
     apbo.prdata <= readdata; 	-- drive apb read bus
     apbo.pirq <= xirq;
 
     gpioo.dout <= dout;
---    gpioo.oen <= (others => '0');       -- tie the gpioo.oen to an arbitary '0'
     gpioo.val <= pval;
-
---    gpioo.sig_out <= dout;
 
   end process;
 
@@ -171,7 +180,7 @@ begin
 
   regs : process(clk, arst)
   begin
-    if rising_edge(clk) then r <= rin; f <= fin; end if;
+    if rising_edge(clk) then r <= rin; end if;
   end process;
 
 -- boot message
