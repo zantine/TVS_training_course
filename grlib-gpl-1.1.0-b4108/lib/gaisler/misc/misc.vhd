@@ -360,15 +360,11 @@ package misc is
     pindex   : integer := 0;
     paddr    : integer := 0;
     pmask    : integer := 16#fff#;
-    imask    : integer := 16#0000#;
     nbits    : integer := 16;			-- GPIO bits
-    oepol    : integer := 0;                    -- Output enable polarity
     syncrst  : integer := 0;
-    bypass   : integer := 16#0000#;
     scantest : integer := 0;
     bpdir    : integer := 16#0000#;
     pirq     : integer := 0;
-    irqgen   : integer := 0
   );
   port (
     rst    : in  std_ulogic;
