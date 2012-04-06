@@ -4,7 +4,7 @@ K3
 cModel Technology
 Z0 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
 Eahbrom
-Z1 w1309254993
+Z1 w1333722020
 Z2 DPx5 grlib 7 devices 0 22 nH[U_@>flN29_7Tnj89QB3
 Z3 DPx5 grlib 7 version 0 22 1m_Cgoejn7LU6]zafCACE0
 Z4 DPx5 grlib 6 stdlib 0 22 aUG_c=:Dze031IULUIQkE1
@@ -13,7 +13,7 @@ Z6 DPx4 ieee 11 numeric_std 0 22 k7B<7GmYYYmX;0X]XHFD10
 Z7 DPx5 grlib 4 amba 0 22 lANGVoniT0WO]bYU@YQ0P0
 Z8 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
 Z9 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z10 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
+Z10 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
 Z11 8ahbrom.vhd
 Z12 Fahbrom.vhd
 l0
@@ -21,7 +21,7 @@ L26
 VDcFBWiV7Y@5Gj]`SE8oK:2
 Z13 OL;C;10.0b;49
 31
-Z14 !s108 1333645184.246349
+Z14 !s108 1333723771.659961
 Z15 !s90 -quiet|-93|-work|work|ahbrom.vhd|
 Z16 !s107 ahbrom.vhd|
 Z17 o-quiet -93 -work work
@@ -69,11 +69,11 @@ R13
 R17
 R18
 !s100 9Qg^0C_leARYTlzQJ1`eh0
-!s108 1333645184.182882
+!s108 1333723770.273538
 !s90 -quiet|-93|-work|work|config.vhd|
 !s107 config.vhd|
 Ecpu_disas
-Z21 w1309254994
+Z21 w1333722058
 Z22 DPx5 grlib 11 sparc_disas 0 22 GMF;mR6WJYGQ;JcD`i4B?0
 Z23 DPx5 grlib 5 sparc 0 22 hC_RIKK=1WRDa?kTiEl491
 R3
@@ -89,7 +89,7 @@ L36
 VI<Cm0T]:lfI[SIQ`9J[AO2
 R13
 31
-Z26 !s108 1333645184.129762
+Z26 !s108 1333723770.178549
 Z27 !s90 -quiet|-93|-work|work|../../lib/work/debug/cpu_disas.vhd|
 Z28 !s107 ../../lib/work/debug/cpu_disas.vhd|
 R17
@@ -135,7 +135,7 @@ R13
 R17
 R18
 !s100 >2?o60cYoUCRdY1PWEJzg3
-!s108 1333645184.020466
+!s108 1333723769.931007
 !s90 -quiet|-93|-work|work|../../lib/work/debug/debug.vhd|
 !s107 ../../lib/work/debug/debug.vhd|
 Egaisler_cpu_disas
@@ -201,7 +201,7 @@ L67
 V7I5jb>^mmPbM;7hf6Ha691
 R13
 31
-Z33 !s108 1333645184.074816
+Z33 !s108 1333723770.078922
 Z34 !s90 -quiet|-93|-work|work|../../lib/work/debug/grtestmod.vhd|
 Z35 !s107 ../../lib/work/debug/grtestmod.vhd|
 R17
@@ -231,16 +231,16 @@ R17
 R18
 !s100 E14S8M[?:IanSi`C7hCMk1
 Eleon3mp
-R1
-Z36 DPx4 work 6 config 0 22 T^j22EPB`0n^KIG[f]B4O2
-Z37 DPx3 esa 10 memoryctrl 0 22 V2Lfz^2eKH>6MoH^UbhjZ1
-Z38 DPx7 gaisler 4 jtag 0 22 VDl:b^nZLzj_njBcA1lPM0
-Z39 DPx7 gaisler 3 net 0 22 [SVaZQIiX?=;<PPZb4SM02
-Z40 DPx7 gaisler 4 misc 0 22 FeJi8@73W?4<[a_N;=`IZ0
-Z41 DPx7 gaisler 4 uart 0 22 0LK`fhLlgI[A2=kG55WQ`0
-Z42 DPx7 gaisler 5 leon3 0 22 PJTV;Uh`OeAE0AB;;Q4Y?3
-Z43 DPx7 gaisler 7 memctrl 0 22 QOj41PHkAc<CeVH<@o5h91
-Z44 DPx7 techmap 9 allclkgen 0 22 AaSoT[JKmeo=8XAI6=nLd1
+Z36 w1333723708
+Z37 DPx4 work 6 config 0 22 T^j22EPB`0n^KIG[f]B4O2
+Z38 DPx3 esa 10 memoryctrl 0 22 V2Lfz^2eKH>6MoH^UbhjZ1
+Z39 DPx7 gaisler 4 jtag 0 22 VDl:b^nZLzj_njBcA1lPM0
+Z40 DPx7 gaisler 3 net 0 22 [SVaZQIiX?=;<PPZb4SM02
+Z41 DPx7 gaisler 4 misc 0 22 S9eJ=8ko7];TR7HNfO09L1
+Z42 DPx7 gaisler 4 uart 0 22 0LK`fhLlgI[A2=kG55WQ`0
+Z43 DPx7 gaisler 5 leon3 0 22 PJTV;Uh`OeAE0AB;;Q4Y?3
+Z44 DPx7 gaisler 7 memctrl 0 22 QOj41PHkAc<CeVH<@o5h91
+Z45 DPx7 techmap 9 allclkgen 0 22 AaSoT[JKmeo=8XAI6=nLd1
 R20
 R2
 R3
@@ -251,22 +251,21 @@ R7
 R8
 R9
 R10
-Z45 8leon3mp.vhd
-Z46 Fleon3mp.vhd
+Z46 8leon3mp.vhd
+Z47 Fleon3mp.vhd
 l0
 L44
 V=UoK]R3^bD<A?E05WV8f80
 R13
 31
-Z47 !s108 1333645184.303083
-Z48 !s90 -quiet|-93|-work|work|leon3mp.vhd|
-Z49 !s107 leon3mp.vhd|
+Z48 !s108 1333723771.749864
+Z49 !s90 -quiet|-93|-work|work|leon3mp.vhd|
+Z50 !s107 leon3mp.vhd|
 R17
 R18
 !s100 Mg3mS8L>[RO4`QL]:l8o01
 Artl
 R19
-R36
 R37
 R38
 R39
@@ -275,6 +274,7 @@ R41
 R42
 R43
 R44
+R45
 R20
 R2
 R3
@@ -284,85 +284,85 @@ R6
 R7
 R8
 R9
-Z50 DEx4 work 7 leon3mp 0 22 =UoK]R3^bD<A?E05WV8f80
+Z51 DEx4 work 7 leon3mp 0 22 =UoK]R3^bD<A?E05WV8f80
 l210
 L129
-VCEMlEXQZ^<^eA17Iz7DUF3
+VjkJVPPz>PIMZFm;0DWQAC0
 R13
 31
-R47
 R48
 R49
+R50
 R17
 R18
-!s100 U^ibCkAc4?l68^koG2lO01
+!s100 mVkIhcDn@_JU_0k8O<51F1
 Etestbench
-R1
-Z51 DPx4 work 5 debug 0 22 6TmD53N2fhNk?F41i791@3
-R36
-Z52 DPx6 micron 10 components 0 22 =JJh5SFR::3L4R9jTl01=0
+Z52 w1333722047
+Z53 DPx4 work 5 debug 0 22 6TmD53N2fhNk?F41i791@3
+R37
+Z54 DPx6 micron 10 components 0 22 =JJh5SFR::3L4R9jTl01=0
 R29
 R30
 R20
 R2
-R40
 R41
+R42
 R3
 R4
 R5
 R6
 R7
-Z53 DPx7 gaisler 7 libdcom 0 22 [:Kek<o_alDD?13_KmRgL3
+Z55 DPx7 gaisler 7 libdcom 0 22 [:Kek<o_alDD?13_KmRgL3
 R8
 R9
 R10
-Z54 8testbench.vhd
-Z55 Ftestbench.vhd
+Z56 8testbench.vhd
+Z57 Ftestbench.vhd
 l0
 L41
 V]MnW]1k6mWfWb<S:5E6LQ3
 !s100 e[Eg`g8ZPA0@omWm4Z9Km1
 R13
 31
-Z56 !s108 1333645184.401210
-Z57 !s90 -quiet|-93|-work|work|testbench.vhd|
-Z58 !s107 testbench.vhd|
+Z58 !s108 1333723771.940285
+Z59 !s90 -quiet|-93|-work|work|testbench.vhd|
+Z60 !s107 testbench.vhd|
 R17
 R18
 Abehav
-R37
 R38
 R39
-R42
+R40
 R43
 R44
-R50
+R45
 R51
-R36
-R52
+R53
+R37
+R54
 R29
 R30
 R20
 R2
-R40
 R41
+R42
 R3
 R4
 R5
 R6
 R7
-R53
+R55
 R8
 R9
-DEx4 work 9 testbench 0 22 ]MnW]1k6mWfWb<S:5E6LQ3
+Z61 DEx4 work 9 testbench 0 22 ]MnW]1k6mWfWb<S:5E6LQ3
 l124
 L60
-V:Y5o2zaRFI>0[HS<f6B8W0
-!s100 P3`6[1YbKVzMaBSUi?W1H2
+Z62 V:Y5o2zaRFI>0[HS<f6B8W0
+Z63 !s100 P3`6[1YbKVzMaBSUi?W1H2
 R13
 31
-R56
-R57
 R58
+R59
+R60
 R17
 R18

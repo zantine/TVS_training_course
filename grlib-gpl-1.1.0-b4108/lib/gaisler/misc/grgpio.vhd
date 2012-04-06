@@ -67,7 +67,7 @@ entity grgpio is
     nbits    : integer := 16;			-- GPIO bits
     syncrst  : integer := 0;                    -- Only synchronous reset
     scantest : integer := 0;
-    pirq     : integer := 0;
+    pirq     : integer := 0
   );
   port (
     rst    : in  std_ulogic;
@@ -132,7 +132,7 @@ begin
     end if;
 
 -- interrupt filtering and routing
-    xirq := (others => '0'); tmp2 := (others => '0');
+    xirq := (others => '0');
 
 -- drive filtered inputs on the output record
 

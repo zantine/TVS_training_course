@@ -406,8 +406,7 @@ begin
 
   gpio0 : if CFG_GRGPIO_ENABLE /= 0 generate     -- GR GPIO unit
     grgpio0: grgpio
-      generic map( pindex => 11, paddr => 11, imask => CFG_GRGPIO_IMASK, 
-	nbits => 12 --CFG_GRGPIO_WIDTH
+      generic map( pindex => 11, paddr => 11, nbits => 12 --CFG_GRGPIO_WIDTH
       )
       port map( rstn, clkm, apbi, apbo(11), gpioi, gpioo);
 
