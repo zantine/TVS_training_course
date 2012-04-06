@@ -46,17 +46,17 @@ use std.textio.all;
 -------------------------------------------------------------------------------
 -- FYI: code from misc.vhd
 -------------------------------------------------------------------------------
---  type gpio_in_type is record
---    din      : std_logic_vector(31 downto 0);
---    sig_in   : std_logic_vector(31 downto 0);
---    sig_en   : std_logic_vector(31 downto 0);
---  end record;
+----  type gpio_in_type is record
+----    din      : std_logic_vector(31 downto 0);
+----    sig_in   : std_logic_vector(31 downto 0);
+----    sig_en   : std_logic_vector(31 downto 0);
+----  end record;
 
 --  type gpio_out_type is record
 --    dout     : std_logic_vector(31 downto 0);
---    oen      : std_logic_vector(31 downto 0);
+----    oen      : std_logic_vector(31 downto 0);
 --    val      : std_logic_vector(31 downto 0);
---    sig_out  : std_logic_vector(31 downto 0);
+----    sig_out  : std_logic_vector(31 downto 0);
 --  end record;
   
 entity grgpio is
@@ -74,7 +74,7 @@ entity grgpio is
     clk    : in  std_ulogic;
     apbi   : in  apb_slv_in_type;
     apbo   : out apb_slv_out_type;
-    gpioi  : in  gpio_in_type;
+--    gpioi  : in  gpio_in_type;
     gpioo  : out gpio_out_type
   );
 end;
@@ -106,7 +106,8 @@ begin
   arst <= apbi.testrst when (scantest = 1) and (apbi.testen = '1') else rst;
   
   
-  comb : process(rst, r, f, apbi, gpioi)
+--  comb : process(rst, r, f, apbi, gpioi)
+  comb : process(rst, r, f, apbi)
     variable readdata, dout, pval : std_logic_vector(31 downto 0);
   variable v : registers;
   variable w : fifo;
@@ -156,10 +157,10 @@ begin
     apbo.pirq <= xirq;
 
     gpioo.dout <= dout;
-    gpioo.oen <= (others => '0');       -- tie the gpioo.oen to an arbitary '0'
+--    gpioo.oen <= (others => '0');       -- tie the gpioo.oen to an arbitary '0'
     gpioo.val <= pval;
 
-    gpioo.sig_out <= dout;
+--    gpioo.sig_out <= dout;
 
   end process;
 

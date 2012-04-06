@@ -138,7 +138,7 @@ architecture rtl of leon3mp is
   signal sdi        : sdctrl_in_type;
   signal sdo       : sdctrl_out_type;
 
-  signal gpioi : gpio_in_type;
+--   signal gpioi : gpio_in_type;
   signal gpioo : gpio_out_type;
 
   signal apbi  : apb_slv_in_type;
@@ -408,7 +408,8 @@ begin
     grgpio0: grgpio
       generic map( pindex => 11, paddr => 11, nbits => 12 --CFG_GRGPIO_WIDTH
       )
-      port map( rstn, clkm, apbi, apbo(11), gpioi, gpioo);
+--      port map( rstn, clkm, apbi, apbo(11), gpioi, gpioo);
+      port map( rstn, clkm, apbi, apbo(11), gpioo);
 
    end generate;
 
