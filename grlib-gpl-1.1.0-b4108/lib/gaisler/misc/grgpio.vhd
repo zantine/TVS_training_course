@@ -67,7 +67,6 @@ entity grgpio is
     nbits    : integer := 16;			-- GPIO bits
     syncrst  : integer := 0;                    -- Only synchronous reset
     scantest : integer := 0;
-    bpdir    : integer := 16#0000#;
     pirq     : integer := 0;
   );
   port (
