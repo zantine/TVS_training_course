@@ -139,6 +139,7 @@ analyze -f VHDL -library gaisler ../../lib/gaisler/leon3/irqmp.vhd
 analyze -f VHDL -library gaisler ../../lib/gaisler/leon3/grfpwxsh.vhd
 analyze -f VHDL -library gaisler ../../lib/gaisler/leon3/grfpushwx.vhd
 analyze -f VHDL -library gaisler ../../lib/gaisler/leon3/leon3sh.vhd
+analyze -f VERILOG -library gaisler ../../lib/gaisler/misc/fifo.v
 analyze -f VHDL -library gaisler ../../lib/gaisler/misc/misc.vhd
 analyze -f VHDL -library gaisler ../../lib/gaisler/misc/rstgen.vhd
 analyze -f VHDL -library gaisler ../../lib/gaisler/misc/gptimer.vhd

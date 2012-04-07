@@ -2,7 +2,7 @@ m255
 K3
 13
 cModel Technology
-Z0 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
+Z0 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
 Pfunctions
 Z1 DPx5 grlib 7 version 0 22 1m_Cgoejn7LU6]zafCACE0
 Z2 DPx4 ieee 11 numeric_std 0 22 k7B<7GmYYYmX;0X]XHFD10
@@ -19,7 +19,7 @@ VbWfOaHoBO7PC]BM_B1nVo2
 Z10 OL;C;10.0b;49
 31
 b1
-Z11 !s108 1333723763.465100
+Z11 !s108 1333772936.378786
 Z12 !s90 -quiet|-93|-work|gsi|../../lib/gsi/ssram/functions.vhd|
 Z13 !s107 ../../lib/gsi/ssram/functions.vhd|
 Z14 o-quiet -93 -work gsi
@@ -57,7 +57,7 @@ Vg]?nOch=6<@oYFK`AFDha0
 !s100 R7754=>DKW6dB_C131aJE3
 R10
 31
-Z18 !s108 1333723763.852054
+Z18 !s108 1333772936.544798
 Z19 !s90 -quiet|-93|-work|gsi|../../lib/gsi/ssram/g880e18bt.vhd|
 Z20 !s107 ../../lib/gsi/ssram/g880e18bt.vhd|
 R14
@@ -69,11 +69,11 @@ R3
 Z21 DPx3 gsi 9 functions 0 22 bWfOaHoBO7PC]BM_B1nVo2
 R4
 R5
-Z22 DEx4 work 9 g880e18bt 0 22 g]?nOch=6<@oYFK`AFDha0
+DEx4 work 9 g880e18bt 0 22 g]?nOch=6<@oYFK`AFDha0
 l132
 L68
-Z23 VRXM?0nPA?aiWU4<]<78QJ1
-Z24 !s100 a:2HQ:OTB[Ke8^48FiDPb0
+VRXM?0nPA?aiWU4<]<78QJ1
+!s100 a:2HQ:OTB[Ke8^48FiDPb0
 R10
 31
 R18
@@ -83,51 +83,51 @@ R14
 R15
 Evhdl_burst_core
 R6
-Z25 DPx5 grlib 7 devices 0 22 nH[U_@>flN29_7Tnj89QB3
-Z26 DPx5 grlib 6 config 0 22 B=<4[MP]PX4lOkMGDR2352
-Z27 DPx5 grlib 4 amba 0 22 lANGVoniT0WO]bYU@YQ0P0
-Z28 DPx5 grlib 5 stdio 0 22 Q[dN`bfzCngEcfl1NNZhG3
+Z22 DPx5 grlib 7 devices 0 22 nH[U_@>flN29_7Tnj89QB3
+Z23 DPx5 grlib 6 config 0 22 B=<4[MP]PX4lOkMGDR2352
+Z24 DPx5 grlib 4 amba 0 22 lANGVoniT0WO]bYU@YQ0P0
+Z25 DPx5 grlib 5 stdio 0 22 Q[dN`bfzCngEcfl1NNZhG3
 R1
 R2
 R3
-Z29 DPx7 gaisler 3 sim 0 22 X:CR:b[m:_bS6DOc;jB570
+Z26 DPx7 gaisler 3 sim 0 22 X:CR:b[m:_bS6DOc;jB570
 R4
 R5
 R7
-Z30 8../../lib/gsi/ssram/core_burst.vhd
-Z31 F../../lib/gsi/ssram/core_burst.vhd
+Z27 8../../lib/gsi/ssram/core_burst.vhd
+Z28 F../../lib/gsi/ssram/core_burst.vhd
 l0
 L61
 VVNjo_XTWGPIIQ7Sd:HYjk3
 R10
 31
-Z32 !s108 1333723763.642897
-Z33 !s90 -quiet|-93|-work|gsi|../../lib/gsi/ssram/core_burst.vhd|
-Z34 !s107 ../../lib/gsi/ssram/core_burst.vhd|
+Z29 !s108 1333772936.470930
+Z30 !s90 -quiet|-93|-work|gsi|../../lib/gsi/ssram/core_burst.vhd|
+Z31 !s107 ../../lib/gsi/ssram/core_burst.vhd|
 R14
 R15
 !s100 ^>gOXSAL;fkmYQMLk;:FI2
 Agsi_burst_core
 R21
+R22
+R23
+R24
 R25
-R26
-R27
-R28
 R1
 R2
 R3
-R29
+R26
 R4
 R5
 DEx4 work 15 vhdl_burst_core 0 22 VNjo_XTWGPIIQ7Sd:HYjk3
 l224
 L107
 VILGQ@EKO`SVO1Fz:@Vl<H3
-!s100 >>3Fnk;KY@[_]T;Za<gnI0
 R10
 31
-R32
-R33
-R34
+R29
+R30
+R31
 R14
 R15
+!s100 >>3Fnk;KY@[_]T;Za<gnI0

@@ -133,6 +133,7 @@ set_global_assignment -name VHDL_FILE ../../lib/gaisler/leon3/irqmp.vhd -library
 set_global_assignment -name VHDL_FILE ../../lib/gaisler/leon3/grfpwxsh.vhd -library gaisler
 set_global_assignment -name VHDL_FILE ../../lib/gaisler/leon3/grfpushwx.vhd -library gaisler
 set_global_assignment -name VHDL_FILE ../../lib/gaisler/leon3/leon3sh.vhd -library gaisler
+set_global_assignment -name VERILOG_FILE ../../lib/gaisler/misc/fifo.v -library gaisler
 set_global_assignment -name VHDL_FILE ../../lib/gaisler/misc/misc.vhd -library gaisler
 set_global_assignment -name VHDL_FILE ../../lib/gaisler/misc/rstgen.vhd -library gaisler
 set_global_assignment -name VHDL_FILE ../../lib/gaisler/misc/gptimer.vhd -library gaisler

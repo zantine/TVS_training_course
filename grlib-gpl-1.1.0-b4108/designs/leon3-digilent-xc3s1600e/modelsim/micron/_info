@@ -2,7 +2,7 @@ m255
 K3
 13
 cModel Technology
-Z0 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
+Z0 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
 Pcomponents
 Z1 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
 Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
@@ -18,7 +18,7 @@ Z5 OL;C;10.0b;49
 Z6 o-quiet -93 -work micron
 Z7 tShow_source 1 Show_Warning1 0 Show_Warning5 0 Explicit 1 Quiet 1
 !s100 kX^E93M1m[lkSI]BB;_E82
-!s108 1333723768.232691
+!s108 1333772937.098926
 !s90 -quiet|-93|-work|micron|../../lib/micron/sdram/components.vhd|
 !s107 ../../lib/micron/sdram/components.vhd|
 vddr2
@@ -36,7 +36,7 @@ Z9 o-quiet -work micron
 Z10 tQuiet 1
 !s100 Id=g8P?3DWUF@H1`VJ8D]0
 !s85 0
-!s108 1333723768.883610
+!s108 1333772937.227802
 !s107 ../../lib/micron/ddr/ddr2.v|
 !s90 -quiet|-work|micron|../../lib/micron/ddr/ddr2.v|
 vddr3
@@ -54,7 +54,7 @@ R9
 R10
 !s100 b;][o`=ij8P0MOT[mgVG_2
 !s85 0
-!s108 1333723769.501451
+!s108 1333772937.375203
 !s107 ../../lib/micron/ddr/ddr3.v|
 !s90 -quiet|-work|micron|../../lib/micron/ddr/ddr3.v|
 vmobile_ddr
@@ -72,7 +72,7 @@ R9
 R10
 !s100 ^0Q;ASC;FVGZgUIXCi4c=1
 !s85 0
-!s108 1333723769.197350
+!s108 1333772937.314603
 !s107 ../../lib/micron/ddr/mobile_ddr.v|
 !s90 -quiet|-work|micron|../../lib/micron/ddr/mobile_ddr.v|
 vmobile_sdr
@@ -90,7 +90,7 @@ R9
 R10
 !s100 M4PI1WjkzQOSnimdU;;162
 !s85 0
-!s108 1333723767.501450
+!s108 1333772937.025833
 !s107 ../../lib/micron/sdram/mobile_sdr.v|
 !s90 -quiet|-work|micron|../../lib/micron/sdram/mobile_sdr.v|
 Emt46v16m16
@@ -115,7 +115,7 @@ Va9gRK;KGNTVkcgCmzgLBl2
 !s100 Ua]>L`WN<49L^<MkiZ4=o1
 R5
 31
-Z22 !s108 1333723769.766660
+Z22 !s108 1333772937.483244
 Z23 !s90 -quiet|-93|-work|micron|../../lib/micron/ddr/mt46v16m16.vhd|
 Z24 !s107 ../../lib/micron/ddr/mt46v16m16.vhd|
 R6
@@ -132,11 +132,11 @@ R18
 R19
 R1
 R2
-Z25 DEx4 work 10 mt46v16m16 0 22 a9gRK;KGNTVkcgCmzgLBl2
+DEx4 work 10 mt46v16m16 0 22 a9gRK;KGNTVkcgCmzgLBl2
 l149
 L94
-Z26 VCZ5c574D61NY9VeNdECoK3
-Z27 !s100 B2X9ZST^Il74CZkWkO_3]0
+VCZ5c574D61NY9VeNdECoK3
+!s100 B2X9ZST^Il74CZkWkO_3]0
 R5
 31
 R22
@@ -158,16 +158,16 @@ R18
 R2
 R1
 R4
-Z28 8../../lib/micron/sdram/mt48lc16m16a2.vhd
-Z29 F../../lib/micron/sdram/mt48lc16m16a2.vhd
+Z25 8../../lib/micron/sdram/mt48lc16m16a2.vhd
+Z26 F../../lib/micron/sdram/mt48lc16m16a2.vhd
 l0
 L206
 VMCY8iR?RH61oMA9bh7ReL1
 R5
 31
-Z30 !s108 1333723768.425809
-Z31 !s90 -quiet|-93|-work|micron|../../lib/micron/sdram/mt48lc16m16a2.vhd|
-Z32 !s107 ../../lib/micron/sdram/mt48lc16m16a2.vhd|
+Z27 !s108 1333772937.132768
+Z28 !s90 -quiet|-93|-work|micron|../../lib/micron/sdram/mt48lc16m16a2.vhd|
+Z29 !s107 ../../lib/micron/sdram/mt48lc16m16a2.vhd|
 R6
 R7
 !s100 SKk>G^Dm7JKR_[z`4SEko1
@@ -189,9 +189,9 @@ L253
 V]_KWiT2z?ggAZ:jAYd?eW3
 R5
 31
-R30
-R31
-R32
+R27
+R28
+R29
 R6
 R7
 !s100 ?=Vz_IQ<aWA^n2dgZgFWM3
@@ -200,17 +200,17 @@ R1
 R2
 R3
 R4
-R28
-R29
+R25
+R26
 l0
 L17
 VCzPWC37zA^1f^SUah<bL^3
 R5
 31
 b1
-R30
-R31
-R32
+R27
+R28
+R29
 R6
 R7
 !s100 91V3Ki@0D^dDlaGeWoaJ:2
@@ -223,9 +223,9 @@ L28
 VI_b9FP=SYho9f1oaAakhD2
 R5
 31
-R30
-R31
-R32
+R27
+R28
+R29
 R6
 R7
 nbody

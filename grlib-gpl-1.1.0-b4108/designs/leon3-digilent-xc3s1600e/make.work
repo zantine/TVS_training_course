@@ -3778,6 +3778,7 @@ GAISLER__wild = $(LIB_GAISLER)/wild/_primary.dat
 GAISLER__usbsim__body = $(LIB_GAISLER)/usbsim/body.dat
 GAISLER__usbsim = $(LIB_GAISLER)/usbsim/_primary.dat
 GAISLER__uart = $(LIB_GAISLER)/uart/_primary.dat
+GAISLER__the_fifo = $(LIB_GAISLER)/the_fifo/_primary.dat
 GAISLER__tbufmem__rtl = $(LIB_GAISLER)/tbufmem/rtl.dat
 GAISLER__tbufmem = $(LIB_GAISLER)/tbufmem/_primary.dat
 GAISLER__svgactrl__rtl = $(LIB_GAISLER)/svgactrl/rtl.dat
@@ -4001,6 +4002,7 @@ whole_library :     $(GAISLER__wild2ahb__rtl) \
     $(GAISLER__usbsim__body) \
     $(GAISLER__usbsim) \
     $(GAISLER__uart) \
+    $(GAISLER__the_fifo) \
     $(GAISLER__tbufmem__rtl) \
     $(GAISLER__tbufmem) \
     $(GAISLER__svgactrl__rtl) \
@@ -5754,6 +5756,10 @@ $(GAISLER__tbufmem__rtl) : ../../lib/gaisler/leon3/tbufmem.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -quiet -93 -work gaisler ../../lib/gaisler/leon3/tbufmem.vhd
+
+$(GAISLER__the_fifo) : ../../lib/gaisler/misc/fifo.v
+	$(VLOG) -quiet -work gaisler +incdir+../../lib/gaisler/misc \
+		 ../../lib/gaisler/misc/fifo.v
 
 $(GAISLER__uart) : ../../lib/gaisler/uart/uart.vhd \
 		$(GRLIB__version) \

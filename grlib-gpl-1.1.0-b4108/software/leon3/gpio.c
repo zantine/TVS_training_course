@@ -20,13 +20,6 @@ static volatile int *pio;
 /*
  * pio[0] = din
  * pio[1] = dout
- * pio[2] = dir
- * pio[3] = imask
- * pio[4] = level
- * pio[5] = edge
- * pio[6] = bypass
- * pio[7] = reserved
- * pio[8] = irqmap
  */
 
 int gpio_fifo_test(int addr) 

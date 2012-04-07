@@ -43,40 +43,40 @@ use std.textio.all;
 -- FYI: code from misc.vhd
 -------------------------------------------------------------------------------
 ----  type gpio_in_type is record
-----    din      : std_logic_vector(31 downto 0);
+----    data_in      : std_logic_vector(31 downto 0);
 ----    sig_in   : std_logic_vector(31 downto 0);
 ----    sig_en   : std_logic_vector(31 downto 0);
 ----  end record;
 
 --  type gpio_out_type is record
---    dout     : std_logic_vector(31 downto 0);
+--    data_out     : std_logic_vector(31 downto 0);
 ----    oen      : std_logic_vector(31 downto 0);
 --    val      : std_logic_vector(31 downto 0);
 ----    sig_out  : std_logic_vector(31 downto 0);
 --  end record;
   
-entity the_fifo is
-generic (fbits : integer := 16);
-port (
-	clr_fifo, rd_fifo, wr_fifo  : in std_ulogic;  
-      	data_in : in std_logic_vector(fbits-1 downto 0);
-        data_out : out std_logic_vector(fbits-1 downto 0)
-);
-end the_fifo;
+-- entity the_fifo is
+-- generic (fbits : integer := 16);
+-- port (
+--	clr_fifo, rd_fifo, wr_fifo  : in std_ulogic;  
+--      	data_in : in std_logic_vector(fbits-1 downto 0);
+--        data_out: out std_logic_vector(fbits-1 downto 0)
+-- );
+-- end the_fifo;
 
-architecture rtl of the_fifo is
-signal fifo_data : std_logic_vector(fbits-1 downto 0) := (others => '0');
-begin  -- rtl
-act_as_a_fifo : process (clr_fifo, wr_fifo, rd_fifo)
-begin  -- process
-  if clr_fifo = '0' then                -- asynchronous reset (active low)
-    fifo_data <= (others => '0');
-  elsif wr_fifo'event and wr_fifo = '1' then
-    fifo_data <= data_in;
-  end if;
-  data_out <= fifo_data;
-end process;
-end rtl;
+-- architecture rtl of the_fifo is
+-- signal fifo_data : std_logic_vector(fbits-1 downto 0) := (others => '0');
+-- begin  -- rtl
+-- act_as_a_fifo : process (clr_fifo, wr_fifo, rd_fifo)
+-- begin  -- process
+--   if clr_fifo = '0' then                -- asynchronous reset (active low)
+--     fifo_data <= (others => '0');
+--   elsif wr_fifo'event and wr_fifo = '1' then
+--    fifo_data <= data_in;
+--   end if;
+--   data_out <= fifo_data;
+-- end process;
+-- end rtl;
 
 library ieee;
 use ieee.std_logic_1164.all;
@@ -120,7 +120,7 @@ constant pconfig : apb_config_type := (
 component the_fifo
     generic (fbits : integer := 16);
     port (
-	clr_fifo, rd_fifo, wr_fifo  : in std_ulogic;  
+	clk, clr_fifo, rd_fifo, wr_fifo  : in std_ulogic;  
       	data_in : in std_logic_vector(fbits-1 downto 0);
         data_out : out std_logic_vector(fbits-1 downto 0)
     );
@@ -132,7 +132,7 @@ signal arst   : std_ulogic := '1';
 begin
   data_fifo : the_fifo
 	  generic map (fbits => nbits)
-          port map (clr_fifo => '1', rd_fifo => rd, wr_fifo => wr, data_in => apbi.pwdata(nbits-1 downto 0), data_out => apbo.prdata(nbits-1 downto 0)); 
+          port map (clk => clk, clr_fifo => '1', rd_fifo => rd, wr_fifo => wr, data_in => apbi.pwdata(nbits-1 downto 0), data_out => apbo.prdata(nbits-1 downto 0)); 
   arst <= apbi.testrst when (scantest = 1) and (apbi.testen = '1') else rst;
   action : process (arst, apbi)
   variable xirq : std_logic_vector(NAHBIRQ-1 downto 0);

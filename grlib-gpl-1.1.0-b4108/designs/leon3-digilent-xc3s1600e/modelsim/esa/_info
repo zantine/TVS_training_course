@@ -2,7 +2,7 @@ m255
 K3
 13
 cModel Technology
-Z0 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
+Z0 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
 Emctrl
 Z1 w1333722057
 Z2 DPx3 esa 10 memoryctrl 0 22 V2Lfz^2eKH>6MoH^UbhjZ1
@@ -25,7 +25,7 @@ Vf4Kbf:7Y<<EK`=SFaF4?g3
 !s100 b<Z[i37ZI2AjLQk[[m<Xn2
 Z16 OL;C;10.0b;49
 31
-Z17 !s108 1333723762.731685
+Z17 !s108 1333772935.979855
 Z18 !s90 -quiet|-93|-work|esa|../../lib/esa/memoryctrl/mctrl.vhd|
 Z19 !s107 ../../lib/esa/memoryctrl/mctrl.vhd|
 Z20 o-quiet -93 -work esa
@@ -42,11 +42,11 @@ R9
 R10
 R11
 R12
-Z22 DEx4 work 5 mctrl 0 22 f4Kbf:7Y<<EK`=SFaF4?g3
+DEx4 work 5 mctrl 0 22 f4Kbf:7Y<<EK`=SFaF4?g3
 l214
 L90
-Z23 V<8;=95Qabgb_AmPFg>CEz0
-Z24 !s100 SGhSK`8j76[EO;>Kn6SiG3
+V<8;=95Qabgb_AmPFg>CEz0
+!s100 SGhSK`8j76[EO;>Kn6SiG3
 R16
 31
 R17
@@ -76,6 +76,6 @@ R16
 R20
 R21
 !s100 5fY=:IXRd0Q3NcHYMgcd13
-!s108 1333723762.561791
+!s108 1333772935.911914
 !s90 -quiet|-93|-work|esa|../../lib/esa/memoryctrl/memoryctrl.vhd|
 !s107 ../../lib/esa/memoryctrl/memoryctrl.vhd|

@@ -126,6 +126,7 @@ read_hdl -vhdl -lib gaisler ../../lib/gaisler/leon3/irqmp.vhd
 read_hdl -vhdl -lib gaisler ../../lib/gaisler/leon3/grfpwxsh.vhd
 read_hdl -vhdl -lib gaisler ../../lib/gaisler/leon3/grfpushwx.vhd
 read_hdl -vhdl -lib gaisler ../../lib/gaisler/leon3/leon3sh.vhd
+read_hdl ../../lib/gaisler/misc/fifo.v
 read_hdl -vhdl -lib gaisler ../../lib/gaisler/misc/misc.vhd
 read_hdl -vhdl -lib gaisler ../../lib/gaisler/misc/rstgen.vhd
 read_hdl -vhdl -lib gaisler ../../lib/gaisler/misc/gptimer.vhd
