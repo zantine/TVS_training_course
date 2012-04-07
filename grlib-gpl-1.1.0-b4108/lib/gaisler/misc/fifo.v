@@ -4,7 +4,6 @@ module the_fifo (clk,
 	         wr_fifo,
 	         data_in,
 	         data_out,
-		 data_out1,
 		 data_counter,
 		 data_out_valid,
 		 empty,
@@ -20,7 +19,6 @@ module the_fifo (clk,
    input wr_fifo;
    input [fbits-1:0] data_in;
    output reg [fbits-1:0] data_out;
-   output reg [fbits-1:0] data_out1;
    output reg [pwidth-1:0]  data_counter;
 
    output reg  data_out_valid;
@@ -37,7 +35,6 @@ module the_fifo (clk,
    initial
      begin
         data_out = 32'bx;
-	data_out1 = 32'bx;
         data_out_valid = 1'b0;
         nxt_wr = 0;
         nxt_rd = 0;
@@ -95,7 +92,6 @@ module the_fifo (clk,
           begin
              data_out_valid <= 0;
              data_out <= 32'bx;
-	     data_out1 <= 32'bx;
           end
         else
           begin // !if(clr_fifo)
@@ -103,13 +99,11 @@ module the_fifo (clk,
                begin
                   data_out_valid <= 1;
                   data_out <= data_mem[nxt_rd];
-		  data_out1 <= data_mem[nxt_rd];
                end
              else
                begin
                   data_out_valid <= 0;
                   data_out <= data_mem[nxt_rd];
-		  data_out1 <= data_mem[nxt_rd];
                end
           end // else: !if(clr_fifo)
      end // always @ (posedge clk)
@@ -121,17 +115,5 @@ module the_fifo (clk,
              data_mem[nxt_wr] <= data_in;
           end
      end // always @ (posedge clk)
-  
-//   always @ (posedge clk)
-//     begin
-//	if (clr_fifo)
-//	  begin
-//	     data_out <= 0;
-//	  end
-//	else if (wr_fifo)
-//	  begin
-//	     data_out <= data_in;
-//	  end
-//   end  // always @ (posedge clk)	
 
  endmodule // the_fifo
