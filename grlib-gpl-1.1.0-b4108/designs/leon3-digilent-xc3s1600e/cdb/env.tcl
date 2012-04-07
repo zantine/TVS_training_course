@@ -210,4 +210,5 @@ set vhdlList {
 {work  ../../../../config.vhd ../../../../ahbrom.vhd ../../../../leon3mp.vhd}
 }
 set verilogList {
+../../../../../../lib/gaisler/misc/fifo.v
 }

@@ -140,6 +140,7 @@ elaborate -ifmt vhdl -work_lib gaisler -ifn ../../lib/gaisler/leon3/irqmp.vhd
 elaborate -ifmt vhdl -work_lib gaisler -ifn ../../lib/gaisler/leon3/grfpwxsh.vhd
 elaborate -ifmt vhdl -work_lib gaisler -ifn ../../lib/gaisler/leon3/grfpushwx.vhd
 elaborate -ifmt vhdl -work_lib gaisler -ifn ../../lib/gaisler/leon3/leon3sh.vhd
+elaborate -ifmt verilog -work_lib gaisler -ifn ../../lib/gaisler/misc/fifo.v
 elaborate -ifmt vhdl -work_lib gaisler -ifn ../../lib/gaisler/misc/misc.vhd
 elaborate -ifmt vhdl -work_lib gaisler -ifn ../../lib/gaisler/misc/rstgen.vhd
 elaborate -ifmt vhdl -work_lib gaisler -ifn ../../lib/gaisler/misc/gptimer.vhd

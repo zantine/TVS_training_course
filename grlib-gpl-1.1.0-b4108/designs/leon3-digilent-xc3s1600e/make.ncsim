@@ -169,6 +169,7 @@ ncsim:
 	ncvhdl -nowarn DLCPTH -NOVITALCHECK -linedebug -v93 -nocopyright -work  gaisler ../../lib/gaisler/leon3/grfpwxsh.vhd
 	ncvhdl -nowarn DLCPTH -NOVITALCHECK -linedebug -v93 -nocopyright -work  gaisler ../../lib/gaisler/leon3/grfpushwx.vhd
 	ncvhdl -nowarn DLCPTH -NOVITALCHECK -linedebug -v93 -nocopyright -work  gaisler ../../lib/gaisler/leon3/leon3sh.vhd
+	ncvlog -nowarn DLCPTH -nocopyright  -work gaisler -INCDIR ../../lib/gaisler/misc ../../lib/gaisler/misc/fifo.v
 	ncvhdl -nowarn DLCPTH -NOVITALCHECK -linedebug -v93 -nocopyright -work  gaisler ../../lib/gaisler/misc/misc.vhd
 	ncvhdl -nowarn DLCPTH -NOVITALCHECK -linedebug -v93 -nocopyright -work  gaisler ../../lib/gaisler/misc/rstgen.vhd
 	ncvhdl -nowarn DLCPTH -NOVITALCHECK -linedebug -v93 -nocopyright -work  gaisler ../../lib/gaisler/misc/gptimer.vhd

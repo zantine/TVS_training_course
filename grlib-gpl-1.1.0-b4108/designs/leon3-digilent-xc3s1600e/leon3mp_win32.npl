@@ -159,6 +159,7 @@ LIBFILE ..\..\lib\gaisler\leon3\irqmp.vhd gaisler vhdl
 LIBFILE ..\..\lib\gaisler\leon3\grfpwxsh.vhd gaisler vhdl
 LIBFILE ..\..\lib\gaisler\leon3\grfpushwx.vhd gaisler vhdl
 LIBFILE ..\..\lib\gaisler\leon3\leon3sh.vhd gaisler vhdl
+LIBFILE ..\..\lib\gaisler\misc\fifo.v gaisler verilog
 LIBFILE ..\..\lib\gaisler\misc\misc.vhd gaisler vhdl
 LIBFILE ..\..\lib\gaisler\misc\rstgen.vhd gaisler vhdl
 LIBFILE ..\..\lib\gaisler\misc\gptimer.vhd gaisler vhdl

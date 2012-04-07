@@ -294,6 +294,8 @@ xfile add "../../lib/gaisler/leon3/grfpushwx.vhd" -lib_vhdl gaisler
 puts "../../lib/gaisler/leon3/grfpushwx.vhd"
 xfile add "../../lib/gaisler/leon3/leon3sh.vhd" -lib_vhdl gaisler
 puts "../../lib/gaisler/leon3/leon3sh.vhd"
+xfile add "../../lib/gaisler/misc/fifo.v"
+puts "../../lib/gaisler/misc/fifo.v"
 xfile add "../../lib/gaisler/misc/misc.vhd" -lib_vhdl gaisler
 puts "../../lib/gaisler/misc/misc.vhd"
 xfile add "../../lib/gaisler/misc/rstgen.vhd" -lib_vhdl gaisler

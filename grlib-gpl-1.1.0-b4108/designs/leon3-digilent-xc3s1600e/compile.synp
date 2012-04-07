@@ -140,6 +140,7 @@ add_file -vhdl -lib gaisler ../../lib/gaisler/leon3/irqmp.vhd
 add_file -vhdl -lib gaisler ../../lib/gaisler/leon3/grfpwxsh.vhd
 add_file -vhdl -lib gaisler ../../lib/gaisler/leon3/grfpushwx.vhd
 add_file -vhdl -lib gaisler ../../lib/gaisler/leon3/leon3sh.vhd
+add_file -verilog ../../lib/gaisler/misc/fifo.v
 add_file -vhdl -lib gaisler ../../lib/gaisler/misc/misc.vhd
 add_file -vhdl -lib gaisler ../../lib/gaisler/misc/rstgen.vhd
 add_file -vhdl -lib gaisler ../../lib/gaisler/misc/gptimer.vhd

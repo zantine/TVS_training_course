@@ -1,8 +1,4 @@
 ------------------------------------------------------------------------------
---  This file is a part of the GRLIB VHDL IP LIBRARY
---  Copyright (C) 2003 - 2008, Gaisler Research
---  Copyright (C) 2008 - 2010, Aeroflex Gaisler
---
 --  This program is free software; you can redistribute it and/or modify
 --  it under the terms of the GNU General Public License as published by
 --  the Free Software Foundation; either version 2 of the License, or
@@ -46,69 +42,69 @@ use std.textio.all;
 -------------------------------------------------------------------------------
 -- FYI: code from misc.vhd
 -------------------------------------------------------------------------------
---  type gpio_in_type is record
---    din      : std_logic_vector(31 downto 0);
---    sig_in   : std_logic_vector(31 downto 0);
---    sig_en   : std_logic_vector(31 downto 0);
---  end record;
+----  type gpio_in_type is record
+----    data_in      : std_logic_vector(31 downto 0);
+----    sig_in   : std_logic_vector(31 downto 0);
+----    sig_en   : std_logic_vector(31 downto 0);
+----  end record;
 
 --  type gpio_out_type is record
---    dout     : std_logic_vector(31 downto 0);
---    oen      : std_logic_vector(31 downto 0);
+--    data_out     : std_logic_vector(31 downto 0);
+----    oen      : std_logic_vector(31 downto 0);
 --    val      : std_logic_vector(31 downto 0);
---    sig_out  : std_logic_vector(31 downto 0);
+----    sig_out  : std_logic_vector(31 downto 0);
 --  end record;
-
--- component grgpio
---  generic (
---    pindex   : integer := 0;
---    paddr    : integer := 0;
---    pmask    : integer := 16#fff#;
---    imask    : integer := 16#0000#;
---    nbits    : integer := 16;			-- GPIO bits
---    oepol    : integer := 0;                    -- Output enable polarity
---    syncrst  : integer := 0;
---    bypass   : integer := 16#0000#;
---    scantest : integer := 0;
---    bpdir    : integer := 16#0000#;
---    pirq     : integer := 0;
---    irqgen   : integer := 0
---  );
---  port (
---    rst    : in  std_ulogic;
---    clk    : in  std_ulogic;
---    apbi   : in  apb_slv_in_type;
---    apbo   : out apb_slv_out_type;
---    gpioi  : in  gpio_in_type;
---    gpioo  : out gpio_out_type
---  );
---  end component;
-
-  -----------------------------------------------------------------------------
-  -- gpgio code
-  -----------------------------------------------------------------------------
   
+-- entity the_fifo is
+-- generic (fbits : integer := 16);
+-- port (
+--	clr_fifo, rd_fifo, wr_fifo  : in std_ulogic;  
+--      	data_in : in std_logic_vector(fbits-1 downto 0);
+--        data_out: out std_logic_vector(fbits-1 downto 0)
+-- );
+-- end the_fifo;
+
+-- architecture rtl of the_fifo is
+-- signal fifo_data : std_logic_vector(fbits-1 downto 0) := (others => '0');
+-- begin  -- rtl
+-- act_as_a_fifo : process (clr_fifo, wr_fifo, rd_fifo)
+-- begin  -- process
+--   if clr_fifo = '0' then                -- asynchronous reset (active low)
+--     fifo_data <= (others => '0');
+--   elsif wr_fifo'event and wr_fifo = '1' then
+--    fifo_data <= data_in;
+--   end if;
+--   data_out <= fifo_data;
+-- end process;
+-- end rtl;
+
+library ieee;
+use ieee.std_logic_1164.all;
+library grlib;
+use grlib.amba.all;
+use grlib.stdlib.all;
+use grlib.devices.all;
+library gaisler;
+use gaisler.misc.all;
+--pragma translate_off
+use std.textio.all;
+--pragma translate_on
+
 entity grgpio is
   generic (
     pindex   : integer := 0;
     paddr    : integer := 0;
     pmask    : integer := 16#fff#;
-    imask    : integer := 16#0000#;
     nbits    : integer := 16;			-- GPIO bits
-    oepol    : integer := 0;                    -- Output enable polarity
     syncrst  : integer := 0;                    -- Only synchronous reset
-    bypass   : integer := 16#0000#;
     scantest : integer := 0;
-    bpdir    : integer := 16#0000#;
-    pirq     : integer := 0;
-    irqgen   : integer := 0
+    pirq     : integer := 0
   );
   port (
     rst    : in  std_ulogic;
     clk    : in  std_ulogic;
     apbi   : in  apb_slv_in_type;
     apbo   : out apb_slv_out_type;
-    gpioi  : in  gpio_in_type;
     gpioo  : out gpio_out_type
   );
 end;
@@ -116,276 +112,60 @@ end;
 architecture rtl of grgpio is
 
 constant REVISION : integer := 1;
--- constant PIMASK : std_logic_vector(31 downto 0) := '0' & conv_std_logic_vector(imask, 31);
-
--- constant BPMASK : std_logic_vector(31 downto 0) := conv_std_logic_vector(bypass, 32);
--- constant BPDIRM  : std_logic_vector(31 downto 0) := conv_std_logic_vector(bpdir, 32);
 
 constant pconfig : apb_config_type := (
   0 => ahb_device_reg ( VENDOR_GAISLER, GAISLER_GPIO, 0, REVISION, pirq),
   1 => apb_iobar(paddr, pmask));
 
--- Prevent tools from issuing index errors for unused code
-function calc_nirqmux return integer is
-begin
-  if irqgen = 0 then return 1; end if;
-  return irqgen;
-end;
+component the_fifo
+    generic (fbits : integer := 16);
+    port (
+	clk, clr_fifo, rd_fifo, wr_fifo  : in std_ulogic;  
+      	data_in : in std_logic_vector(fbits-1 downto 0);
+        data_out : out std_logic_vector(fbits-1 downto 0)
+    );
+end component;
 
-constant NIRQMUX : integer := calc_nirqmux;
-
--- subtype irqmap_type is std_logic_vector(log2x(NIRQMUX)-1 downto 0);
-
--- type irqmap_array_type is array (natural range <>) of irqmap_type;
-
-type registers is record
-  din1  	:  std_logic_vector(nbits-1 downto 0);
-  din2  	:  std_logic_vector(nbits-1 downto 0);
-  dout   	:  std_logic_vector(nbits-1 downto 0);
--- not using other registers
---  imask  	:  std_logic_vector(nbits-1 downto 0);
---  level  	:  std_logic_vector(nbits-1 downto 0);
---  edge   	:  std_logic_vector(nbits-1 downto 0);
---  ilat   	:  std_logic_vector(nbits-1 downto 0);
---  dir    	:  std_logic_vector(nbits-1 downto 0);
---  bypass        :  std_logic_vector(nbits-1 downto 0);
---  irqmap        :  irqmap_array_type(nbits-1 downto 0);
-end record;
-
-signal r, rin : registers;
-signal arst     : std_ulogic;
+signal wr, rd : std_ulogic := '0';
+signal arst   : std_ulogic := '1';
+signal frst   : std_ulogic := '1';        -- FIFO reset (active high unlike arst)
 
 begin
-
+  data_fifo : the_fifo
+	  generic map (fbits => nbits)
+          port map (clk => clk, clr_fifo => frst, rd_fifo => rd, wr_fifo => wr, data_in => apbi.pwdata(nbits-1 downto 0), data_out => apbo.prdata(nbits-1 downto 0)); 
   arst <= apbi.testrst when (scantest = 1) and (apbi.testen = '1') else rst;
-  
-  
-  comb : process(rst, r, apbi, gpioi)
---  variable readdata, tmp2, dout, dir, pval, din : std_logic_vector(31 downto 0);
--- Simplified by removing redundant signals
---  variable readdata, tmp2, dout, pval : std_logic_vector(31 downto 0);
-    variable readdata, dout, pval : std_logic_vector(31 downto 0);
-  variable v : registers;
+  frst <= not rst;
+  action : process (arst, apbi)
   variable xirq : std_logic_vector(NAHBIRQ-1 downto 0);
   begin
-
---    din := (others => '0');
-    dout := (others => '0');
-    dout(nbits-1 downto 0) := r.dout(nbits-1 downto 0);
---    din(nbits-1 downto 0) := gpioi.din(nbits-1 downto 0);
-    v := r; v.din2 := r.din1; v.din1 := dout(nbits-1 downto 0);  -- loop back dout to din
---    Simplified by removing redundant signals
---    v.ilat := r.din2; dout := (others => '0'); dir := (others => '0');
---     dir(nbits-1 downto 0) := r.dir(nbits-1 downto 0);
---    if (syncrst = 1) and (rst = '0') then
---      if oepol = 0 then dir(nbits-1 downto 0) := (others => '1');
---      else dir(nbits-1 downto 0) := (others => '0'); end if;
---    end if;
-
--- read registers
-    readdata := (others => '0');
-    case apbi.paddr(5 downto 2) is
-    when "0000" => readdata(nbits-1 downto 0) := r.din2;
-    when "0001" => readdata(nbits-1 downto 0) := r.dout;
---      Removed other registers
---    when "0010" =>
---      if oepol = 0 then readdata(nbits-1 downto 0) := not r.dir;
---      else readdata(nbits-1 downto 0) := r.dir; end if;
---    when "0011" =>
---      if (imask /= 0) then
---	readdata(nbits-1 downto 0) :=
---	  r.imask(nbits-1 downto 0) and PIMASK(nbits-1 downto 0);
---      end if;
---    when "0100" =>
---      if (imask /= 0) then
---	readdata(nbits-1 downto 0) :=
---	  r.level(nbits-1 downto 0) and PIMASK(nbits-1 downto 0);
---      end if;
---    when "0101" =>
---      if (imask /= 0) then
---	readdata(nbits-1 downto 0) :=
---	  r.edge(nbits-1 downto 0) and PIMASK(nbits-1 downto 0);
---      end if;
---    when "0110" =>
---      if (bypass /= 0) then
---        readdata(nbits-1 downto 0) :=
---          r.bypass(nbits-1 downto 0) and BPMASK(nbits-1 downto 0);
---      end if;
---    when "0111" =>
---      null;
-    when others =>
-      null;
---      if irqgen > 1 then
---        for i in 0 to (nbits+3)/4-1 loop
---          if irqgen <= 4 or i = conv_integer(apbi.paddr(4 downto 2)) then
---            for j in 0 to 3 loop
---              if (j+i*4) > (nbits-1) then
---                exit;
---              end if;
---              readdata((24+log2x(NIRQMUX)-1-j*8) downto (24-j*8)) := r.irqmap(i*4+j);
---            end loop;
---          end if;
---        end loop;
---      end if;
-    end case;
-
--- write registers
-
+    apbo.prdata(31 downto nbits) <= (others => '0');
+-- write
     if (apbi.psel(pindex) and apbi.penable and apbi.pwrite) = '1' then
       case apbi.paddr(5 downto 2) is
-      when "0000" => null;
-      when "0001" => v.dout := apbi.pwdata(nbits-1 downto 0);
--- Removed other registers
---      when "0010" =>
---        if oepol = 0 then v.dir  := not apbi.pwdata(nbits-1 downto 0);
---        else v.dir := apbi.pwdata(nbits-1 downto 0); end if;
---      when "0011" =>
---        if (imask /= 0) then
---	  v.imask := apbi.pwdata(nbits-1 downto 0) and PIMASK(nbits-1 downto 0);
---        end if;
---      when "0100" =>
---        if (imask /= 0) then
---	  v.level := apbi.pwdata(nbits-1 downto 0) and PIMASK(nbits-1 downto 0);
---        end if;
---      when "0101" =>
---        if (imask /= 0) then
---	  v.edge := apbi.pwdata(nbits-1 downto 0) and PIMASK(nbits-1 downto 0);
---        end if;
---      when "0110" =>
---        if (bypass /= 0) then
---	  v.bypass := apbi.pwdata(nbits-1 downto 0) and BPMASK(nbits-1 downto 0);
---        end if;
---      when "0111" => 
---        null;
-      when others =>
-          null;
---        if irqgen > 1 then
---          for i in 0 to (nbits+3)/4-1 loop
---            if irqgen <= 4 or i = conv_integer(apbi.paddr(4 downto 2)) then
---              for j in 0 to 3 loop
---                if (j+i*4) > (nbits-1) then
---                  exit;
---                end if;
---                v.irqmap(i*4+j) := apbi.pwdata((24+log2x(NIRQMUX)-1-j*8) downto (24-j*8));
---              end loop;
---            end if;
---          end loop;
---        end if;
+      when "0001" => wr <= '1';
+      when others => wr <= '0';
       end case;
+    else
+      wr <= '0';
     end if;
-
+-- read registers
+    if (apbi.psel(pindex) and apbi.penable and not apbi.pwrite) = '1' then
+      case apbi.paddr(5 downto 2) is
+      when "0000" => rd <= '1'; 
+      when others => rd <= '0';
+      end case;
+    else
+      rd <= '0';
+    end if;
 -- interrupt filtering and routing
-
     xirq := (others => '0');
---    xirq := (others => '0'); tmp2 := (others => '0');
---    if (imask /= 0) then
---      tmp2(nbits-1 downto 0) := r.din2;
---      for i in 0 to nbits-1 loop
---        if (PIMASK(i) and r.imask(i)) = '1' then
---	    if r.edge(i) = '1' then
---	       if r.level(i) = '1' then tmp2(i) := r.din2(i) and not r.ilat(i);
---             else tmp2(i) := not r.din2(i) and r.ilat(i); end if;
---          else tmp2(i) := r.din2(i) xor not r.level(i); end if;
---	  else
---	    tmp2(i) := '0';
---        end if;
---      end loop;
-
---      for i in 0 to nbits-1 loop
---        if irqgen = 0 then
---  IRQ for line i = i + pirq
---          if (i+pirq) > NAHBIRQ-1 then
---           exit;
---          end if;
---          xirq(i+pirq) := tmp2(i);
---        else
---  IRQ for line i determined by irq select register i
---          for j in 0 to NIRQMUX-1 loop
---            if (j+pirq) > NAHBIRQ-1 then
---              exit;
---              end if;
---            if (irqgen = 1) or (j = conv_integer(r.irqmap(i))) then
---                xirq(j+pirq) := xirq(j+pirq) or tmp2(i);
---              end if;
---            end loop;
---          end if;
---        end loop;      
---      end if;
-
 -- drive filtered inputs on the output record
-
-   pval := (others => '0');
-   pval(nbits-1 downto 0) := r.din2;
-
--- Drive output with gpioi.sig_in for bypassed registers
--- This option is dissabled by removing this code
---   if bypass /= 0 then
---       for i in 0 to nbits-1 loop
---           if r.bypass(i) = '1' then
---               dout(i) := gpioi.sig_in(i);
---           end if;
---       end loop;
---   end if;
-
--- Drive output with gpioi.sig_in for bypassed registers
--- This option is dissabled by removing the code
---   if bpdir /= 0 then
---       for i in 0 to nbits-1 loop
---           if (BPDIRM(i) and gpioi.sig_en(i)) = '1'   then
---               dout(i) := gpioi.sig_in(i);
---               if oepol = 0 then dir(i) := '0'; else dir(i) := '1'; end if;
---           end if;
---       end loop;
---   end if;
--- reset operation
-
-    if rst = '0' then
--- Removed registers
---      v.imask := (others => '0'); v.bypass := (others => '0');
---      if oepol = 1 then v.dir := (others => '0');
---      else v.dir := (others => '1'); end if;
-      v.dout := (others => '0');
---      v.irqmap := (others => (others => '0'));
-    end if;
-
---    if irqgen < 2 then v.irqmap := (others => (others => '0')); end if;
-    
-    rin <= v;
-
-    apbo.prdata <= readdata; 	-- drive apb read bus
     apbo.pirq <= xirq;
-
--- Removed register dir
---    if (syncrst = 1 ) and (rst = '0') then
---      if oepol = 1 then dir := (others => '0');
---      else dir := (others => '1'); end if;
---    end if;
-      
-    gpioo.dout <= dout;
---    gpioo.oen <= dir;
-    gpioo.oen <= (others => '0');       -- tie the gpioo.oen to an arbitary '0'
-    gpioo.val <= pval;
-
--- non filtered input (now looping back dout)
---    gpioo.sig_out <= din;
-    gpioo.sig_out <= dout;
-
-  end process;
+end process;         
 
   apbo.pindex <= pindex;
   apbo.pconfig <= pconfig;
-
--- registers
-
-  regs : process(clk, arst)
-  begin
-    if rising_edge(clk) then r <= rin; end if;
---    removed dir register
---    if (syncrst = 0 ) and (arst = '0') then
---      if oepol = 1 then r.dir <= (others => '0');
---      else r.dir <= (others => '1'); end if;
---    end if;
-  end process;
 
 -- boot message
 
@@ -395,4 +175,4 @@ begin
 	": " &  tost(nbits) & "-bit GPIO Unit rev " & tost(REVISION));
 -- pragma translate_on
 
-end;
+end rtl;
