@@ -3,9 +3,14 @@ module the_fifo (clk,
 	         rd_fifo,
 	         wr_fifo,
 	         data_in,
-	         data_out);
+	         data_out,
+		 data_out_valid,
+		 empty,
+		 full);
 
    parameter fbits = 8;
+   parameter pwidth = 3;
+   parameter fdepth = (1<<pwidth);  // 8 for 3 bit address :-)
 
    input clk;
    input clr_fifo;
@@ -14,10 +19,19 @@ module the_fifo (clk,
    input [fbits-1:0] data_in;
    output reg [fbits-1:0] data_out;
 
-//   reg [fbits-1:0]    fifo_data;
-   
+   output reg		  data_out_valid;
+   output reg		  empty;
+   output reg		  full;
+
+ initial
+   begin
+     empty = 0;
+     full = 1;
+  end  
+  
    always @ (posedge clk)
      begin
+        data_out_valid = !clr_fifo;
 	if (clr_fifo)
 	  begin
 	     data_out <= 0;
@@ -25,7 +39,6 @@ module the_fifo (clk,
 	else if (wr_fifo)
 	  begin
 	     data_out <= data_in;
-//	     data_out <= fifo_data;
 	  end
      end  // always @ (posedge clk)	
 

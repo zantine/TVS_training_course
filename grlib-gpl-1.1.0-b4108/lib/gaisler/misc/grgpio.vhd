@@ -118,11 +118,13 @@ constant pconfig : apb_config_type := (
   1 => apb_iobar(paddr, pmask));
 
 component the_fifo
-    generic (fbits : integer := 16);
+    generic (fbits : integer := 16;
+             pwidth : integer := 3);
     port (
 	clk, clr_fifo, rd_fifo, wr_fifo  : in std_ulogic;  
       	data_in : in std_logic_vector(fbits-1 downto 0);
-        data_out : out std_logic_vector(fbits-1 downto 0)
+        data_out : out std_logic_vector(fbits-1 downto 0);
+        data_out_valid, empty, full : out std_ulogic
     );
 end component;
 
@@ -130,10 +132,14 @@ signal wr, rd : std_ulogic := '0';
 signal arst   : std_ulogic := '1';
 signal frst   : std_ulogic := '1';        -- FIFO reset (active high unlike arst)
 
+signal data_out_valid, empty, full : std_ulogic;
+
 begin
   data_fifo : the_fifo
-	  generic map (fbits => nbits)
-          port map (clk => clk, clr_fifo => frst, rd_fifo => rd, wr_fifo => wr, data_in => apbi.pwdata(nbits-1 downto 0), data_out => apbo.prdata(nbits-1 downto 0)); 
+	  generic map (fbits => nbits, pwidth => 2)
+          port map (clk => clk, clr_fifo => frst, rd_fifo => rd, wr_fifo => wr,
+                    data_in => apbi.pwdata(nbits-1 downto 0), data_out => apbo.prdata(nbits-1 downto 0),
+                    data_out_valid => data_out_valid, empty => empty, full => full); 
   arst <= apbi.testrst when (scantest = 1) and (apbi.testen = '1') else rst;
   frst <= not rst;
   action : process (arst, apbi)
