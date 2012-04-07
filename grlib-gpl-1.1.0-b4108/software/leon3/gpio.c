@@ -38,6 +38,29 @@ int gpio_fifo_test(int addr)
         pio[2] = 0; /* any write to this register clears the fifo */  
         report_subtest(1);
 
+        pio[1] = 0xff1; 
+        pio[1] = 0xff2;
+        pio[1] = 0xff3; 
+        pio[1] = 0xff4;
+        pio[1] = 0xff5;
+        pio[1] = 0xff6;
+        pio[1] = 0xff7;
+        pio[1] = 0xff8;
+        pio[1] = 0xff9;
+
+        if (pio[3] != 0x002) fail(1);
+
+        value = pio[0];
+        value = pio[0];
+        value = pio[0];
+        value = pio[0];
+        value = pio[0];
+
+        if (pio[3] != 0x000) fail(2);
+
+        pio[2] = 0;
+        if (pio[3] != 0x001) fail(3);        
+
         /* determine port width and mask */
         mask = 0;
         width = 0;
@@ -53,15 +76,35 @@ int gpio_fifo_test(int addr)
                 mask = mask | (1 << width);
                 width++;
         }
-        
+
         pio[1] = 0;
-        if( (pio[0] & mask) != 0) fail(1);  
+        if( (pio[0] & mask) != 0) fail(4);  
 
         pio[1] = 0x89ABCDEF;
-	        if( (pio[0] & mask) != (0x89ABCDEF & mask)) fail(2);
+	        if( (pio[0] & mask) != (0x89ABCDEF & mask)) fail(5);
 
 	pio[1] = 0xFED;
-	if (pio[0] != 0xFED) fail(3);
+	if (pio[0] != 0xFED) fail(6);
+
+        pio[1] = 0xABC;
+        
+	if(pio[3] != 0x0) fail(7);
+
+        pio[1] = 0x123;
+        pio[1] = 0x234;
+        
+        if (pio[4] != 0x003) fail(8);
+
+        pio[1] = 0x345;
+   
+        if (pio[0] != 0xABC) fail(9);
+
+        pio[2] = 0;
+        if (pio[4] != 0x0) fail(10);
+
+        if (pio[8] != 0x0) fail(11);
+        pio[8] =0x1;
+        if (pio[8] != 0x1) fail(12);        
 
         return width;
 }

@@ -54,29 +54,6 @@ use std.textio.all;
 --    val      : std_logic_vector(31 downto 0);
 ----    sig_out  : std_logic_vector(31 downto 0);
 --  end record;
-  
--- entity the_fifo is
--- generic (fbits : integer := 16);
--- port (
---	clr_fifo, rd_fifo, wr_fifo  : in std_ulogic;  
---      	data_in : in std_logic_vector(fbits-1 downto 0);
---        data_out: out std_logic_vector(fbits-1 downto 0)
--- );
--- end the_fifo;
-
--- architecture rtl of the_fifo is
--- signal fifo_data : std_logic_vector(fbits-1 downto 0) := (others => '0');
--- begin  -- rtl
--- act_as_a_fifo : process (clr_fifo, wr_fifo, rd_fifo)
--- begin  -- process
---   if clr_fifo = '0' then                -- asynchronous reset (active low)
---     fifo_data <= (others => '0');
---   elsif wr_fifo'event and wr_fifo = '1' then
---    fifo_data <= data_in;
---   end if;
---   data_out <= fifo_data;
--- end process;
--- end rtl;
 
 library ieee;
 use ieee.std_logic_1164.all;
@@ -113,8 +90,8 @@ architecture rtl of grgpio is
 
 constant REVISION : integer := 1;
 
-constant POINTER_WIDTH : integer := 2;         -- define pointer width for data FIFO
-constant FIFO_DEPTH : integer := 4;     -- defined by pointer width
+constant pointer_width : integer := 3;  -- define pointer width for data FIFO
+constant fifo_depth : integer := 8;     -- defined by pointer width (1<<pointer_width)
 
 constant pconfig : apb_config_type := (
   0 => ahb_device_reg ( VENDOR_GAISLER, GAISLER_GPIO, 0, REVISION, pirq),
@@ -122,13 +99,13 @@ constant pconfig : apb_config_type := (
 
 component the_fifo
     generic (fbits : integer := nbits;
-             pwidth : integer := POINTER_WIDTH;
-             fdepth : integer := FIFO_DEPTH);
+             pwidth : integer := pointer_width;
+             fdepth : integer := fifo_depth);
     port (
 	clk, clr_fifo, rd_fifo, wr_fifo  : in std_ulogic;  
       	data_in : in std_logic_vector(fbits-1 downto 0);
         data_out : out std_logic_vector(fbits-1 downto 0);
-        data_counter: out std_logic_vector(pwidth-1 downto 0);
+        data_counter: out std_logic_vector(pwidth downto 0);
         data_out_valid, empty, full : out std_ulogic
     );
 end component;
@@ -136,29 +113,31 @@ end component;
 signal wr, rd : std_ulogic := '0';
 signal arst   : std_ulogic := '1';
 signal frst   : std_ulogic := '1';        -- FIFO reset (active high unlike arst)
+signal en_int : std_ulogic := '0'; 
 
-signal data_out_valid, empty, full : std_ulogic;
+signal data_out_valid, fifo_empty, fifo_full : std_ulogic;
 signal data_counter : std_logic_vector(31 downto 0);
 signal dout : std_logic_vector(nbits-1 downto 0);
 
 begin
   data_fifo : the_fifo
-	  generic map (fbits => nbits, pwidth => POINTER_WIDTH, fdepth => FIFO_DEPTH)
+	  generic map (fbits => nbits, pwidth => pointer_width, fdepth => fifo_depth)
           port map (clk => clk, clr_fifo => frst, rd_fifo => rd, wr_fifo => wr,
                     data_in => apbi.pwdata(nbits-1 downto 0), data_out => dout,
-                    data_counter => data_counter(POINTER_WIDTH-1 downto 0), data_out_valid => data_out_valid, empty => empty, full => full); 
+                    data_counter => data_counter(pointer_width downto 0), data_out_valid => data_out_valid, empty => fifo_empty, full => fifo_full); 
   arst <= apbi.testrst when (scantest = 1) and (apbi.testen = '1') else rst;
   action : process (arst, apbi)
   variable xirq : std_logic_vector(NAHBIRQ-1 downto 0);
   begin
     apbo.prdata(31 downto nbits) <= (others => '0');
     gpioo.dout(31 downto nbits) <= (others => '0');
-    data_counter(31 downto POINTER_WIDTH) <= (others => '0');
+    data_counter(31 downto pointer_width) <= (others => '0');
 -- write
     if (apbi.psel(pindex) and apbi.penable and apbi.pwrite) = '1' then
       case apbi.paddr(5 downto 2) is
       when "0001" => wr <= '1';
       when "0010" => frst <= '1';
+      when "1000" => en_int <=  apbi.pwdata(0);
       when others =>
           wr <= '0';
           frst <= not arst;
@@ -170,11 +149,27 @@ begin
 -- read registers
     if (apbi.psel(pindex) and apbi.penable and not apbi.pwrite) = '1' then
       case apbi.paddr(5 downto 2) is
-      when "0000" =>
-        rd <= '1';
-        gpioo.dout(nbits-1 downto 0) <= dout(nbits-1 downto 0);
-        apbo.prdata(nbits-1 downto 0) <= dout(nbits-1 downto 0);
-      when others => rd <= '0';
+        when "0000" =>
+          rd <= '1';
+          gpioo.dout(nbits-1 downto 0) <= dout(nbits-1 downto 0);
+          apbo.prdata(nbits-1 downto 0) <= dout(nbits-1 downto 0);
+        when "0100" =>
+          apbo.prdata <= data_counter;
+        when "1000" =>
+          apbo.prdata <= (others => '0');
+          if (en_int = '1') then
+            apbo.prdata(0) <= '1';
+          end if;
+          when "0011" =>
+            apbo.prdata <= (others => '0');
+            if (fifo_empty = '1') then
+              apbo.prdata(0) <= '1';
+            end if;
+            if fifo_full = '1' then
+              apbo.prdata(1) <= '1';              
+            end if;
+        when others =>
+          rd <= '0';
       end case;
     else
       rd <= '0';

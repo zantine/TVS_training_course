@@ -10,7 +10,7 @@ module the_fifo (clk,
 		 full);
 
    parameter fbits = 8;
-   parameter pwidth = 3;
+   parameter pwidth = 2;
    parameter fdepth = (1<<pwidth);  // 8 for 3 bit address :-)
 
    input clk;
@@ -19,7 +19,7 @@ module the_fifo (clk,
    input wr_fifo;
    input [fbits-1:0] data_in;
    output reg [fbits-1:0] data_out;
-   output reg [pwidth-1:0]  data_counter;
+   output reg [pwidth:0]  data_counter;
 
    output reg  data_out_valid;
    output      empty;
