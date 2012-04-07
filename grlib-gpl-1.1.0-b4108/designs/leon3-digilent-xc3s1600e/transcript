@@ -2497,6 +2497,9 @@
 # Therefore, simulation behavior may occur that is not in compliance with
 # the VHDL standard as the initial values come from the base signal /testbench/d3/etho.txd(4).
 #  
+do /home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e/wave_fifo.do
+# ** Error: (vish-4014) No objects found matching '/testbench/d3/gpio0/grgpio0/data_fifo/fifo_data'.
+# Executing ONERROR command at macro /home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e/wave_fifo.do line 9
 run -a
 # LEON3 Demonstration design for Digilent Spartan3E Eval board
 # GRLIB Version 1.1.0, build 4108
@@ -2567,6 +2570,6 @@ run -a
 # Test passed, halting with IU error mode
 # 
 # ** Failure: *** IU in error mode, simulation halted ***
-#    Time: 410 us  Iteration: 0  Process: /testbench/iuerr File: testbench.vhd
+#    Time: 415 us  Iteration: 0  Process: /testbench/iuerr File: testbench.vhd
 # Break in Process iuerr at testbench.vhd line 215
 quit

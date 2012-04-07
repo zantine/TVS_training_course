@@ -57,8 +57,8 @@ int gpio_fifo_test(int addr)
         if( (pio[0] & mask) != 0) fail(1);  
         pio[1] = 0x89ABCDEF;
 	        if( (pio[0] & mask) != (0x89ABCDEF & mask)) fail(2);
-	pio[1] = 0xDEF;
-	if (pio[0] != 0xDEF) fail(3);
+	pio[1] = 0xFED;
+	if (pio[0] != 0xFED) fail(3);
 
         return width;
 }

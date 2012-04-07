@@ -2,12 +2,12 @@ m255
 K3
 13
 cModel Technology
-Z0 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+Z0 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
 Pattributes
 Z1 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
 Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z3 w1333722057
-Z4 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+Z4 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
 8../../lib/synplify/sim/synattr.vhd
 F../../lib/synplify/sim/synattr.vhd
 l0
@@ -16,7 +16,7 @@ V6ezddZdL?6J;PJUj@nOIQ1
 !s100 JRUf97h;dmWjDTKkjWB^32
 Z5 OL;C;10.0b;49
 31
-!s108 1333772909.409097
+!s108 1333804187.081113
 !s90 -quiet|-93|-work|synplify|../../lib/synplify/sim/synattr.vhd|
 !s107 ../../lib/synplify/sim/synattr.vhd|
 Z6 o-quiet -93 -work synplify
@@ -33,7 +33,7 @@ L267
 V=Y[H16Pe`mzH;3LWEV6M_0
 R5
 31
-Z10 !s108 1333772909.346223
+Z10 !s108 1333804187.030533
 Z11 !s90 -quiet|-93|-work|synplify|../../lib/synplify/sim/synplify.vhd|
 Z12 !s107 ../../lib/synplify/sim/synplify.vhd|
 R6
@@ -64,6 +64,7 @@ DEx4 work 12 prim_counter 0 22 @A<zFC]d=?KK>j6klDdCb0
 l33
 L31
 VP1:^Akg3?fWQli2kOG2Oo3
+!s100 =V`U<hATTGfEnzWaFNH^M1
 R5
 31
 R10
@@ -71,7 +72,6 @@ R11
 R12
 R6
 R7
-!s100 =V`U<hATTGfEnzWaFNH^M1
 Eprim_dff
 R3
 R1
@@ -97,6 +97,7 @@ DEx4 work 8 prim_dff 0 22 0<MZVePhNG[J[>O=kCckO1
 l70
 L69
 V<7hl60D`ge=HTe;LV?hF10
+!s100 mb3zE_8ZGVON_EaXflRM[3
 R5
 31
 R10
@@ -104,7 +105,6 @@ R11
 R12
 R6
 R7
-!s100 mb3zE_8ZGVON_EaXflRM[3
 Eprim_latch
 R3
 R1
@@ -130,6 +130,7 @@ DEx4 work 10 prim_latch 0 22 aFMjIO;X`D26fSF=z5UeG2
 l126
 L125
 V:FL^jZ3K_RnU_aHaW>9TT2
+!s100 V7>OY_Za3QV:;Cma`:Cej2
 R5
 31
 R10
@@ -137,7 +138,6 @@ R11
 R12
 R6
 R7
-!s100 V7>OY_Za3QV:;Cma`:Cej2
 Eprim_ramd
 R3
 Z13 DPx5 grlib 7 version 0 22 1m_Cgoejn7LU6]zafCACE0
@@ -169,6 +169,7 @@ DEx4 work 9 prim_ramd 0 22 @_;WV@X=_nA2BfeMlLzQd0
 l249
 L243
 Vk?`61Y2XVbI=>@[Z@dWNZ2
+!s100 8HjIOJXUZ_abeP7e[UYR@2
 R5
 31
 R10
@@ -176,7 +177,6 @@ R11
 R12
 R6
 R7
-!s100 8HjIOJXUZ_abeP7e[UYR@2
 Eprim_sdff
 R3
 R1
@@ -202,6 +202,7 @@ DEx4 work 9 prim_sdff 0 22 U`4I_BEMgDl;R4A?41J>30
 l98
 L96
 VlM2fB6P9Czc`zOBW3Zn6F1
+!s100 CO9W8lAK8^cQW2J6zMza<0
 R5
 31
 R10
@@ -209,7 +210,6 @@ R11
 R12
 R6
 R7
-!s100 CO9W8lAK8^cQW2J6zMza<0
 Ezeroohm1
 R3
 R1
@@ -235,6 +235,7 @@ DEx4 work 8 zeroohm1 0 22 Hl:[Ae4:gYT6JoUH@if2;0
 l203
 L198
 V3S`V5MN:?A9DN1WFO]I9K0
+!s100 ckD=?F=GNVBc5^8eMb08Z3
 R5
 31
 R10
@@ -242,4 +243,3 @@ R11
 R12
 R6
 R7
-!s100 ckD=?F=GNVBc5^8eMb08Z3

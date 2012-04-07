@@ -128,12 +128,14 @@ end component;
 
 signal wr, rd : std_ulogic := '0';
 signal arst   : std_ulogic := '1';
+signal frst   : std_ulogic := '1';        -- FIFO reset (active high unlike arst)
 
 begin
   data_fifo : the_fifo
 	  generic map (fbits => nbits)
-          port map (clk => clk, clr_fifo => '1', rd_fifo => rd, wr_fifo => wr, data_in => apbi.pwdata(nbits-1 downto 0), data_out => apbo.prdata(nbits-1 downto 0)); 
+          port map (clk => clk, clr_fifo => frst, rd_fifo => rd, wr_fifo => wr, data_in => apbi.pwdata(nbits-1 downto 0), data_out => apbo.prdata(nbits-1 downto 0)); 
   arst <= apbi.testrst when (scantest = 1) and (apbi.testen = '1') else rst;
+  frst <= not rst;
   action : process (arst, apbi)
   variable xirq : std_logic_vector(NAHBIRQ-1 downto 0);
   begin

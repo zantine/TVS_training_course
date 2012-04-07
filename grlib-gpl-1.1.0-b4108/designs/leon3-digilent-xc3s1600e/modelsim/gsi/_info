@@ -2,7 +2,7 @@ m255
 K3
 13
 cModel Technology
-Z0 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+Z0 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
 Pfunctions
 Z1 DPx5 grlib 7 version 0 22 1m_Cgoejn7LU6]zafCACE0
 Z2 DPx4 ieee 11 numeric_std 0 22 k7B<7GmYYYmX;0X]XHFD10
@@ -10,7 +10,7 @@ Z3 DPx5 grlib 6 stdlib 0 22 aUG_c=:Dze031IULUIQkE1
 Z4 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
 Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z6 w1333722057
-Z7 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+Z7 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
 Z8 8../../lib/gsi/ssram/functions.vhd
 Z9 F../../lib/gsi/ssram/functions.vhd
 l0
@@ -19,7 +19,7 @@ VbWfOaHoBO7PC]BM_B1nVo2
 Z10 OL;C;10.0b;49
 31
 b1
-Z11 !s108 1333772936.378786
+Z11 !s108 1333804215.106901
 Z12 !s90 -quiet|-93|-work|gsi|../../lib/gsi/ssram/functions.vhd|
 Z13 !s107 ../../lib/gsi/ssram/functions.vhd|
 Z14 o-quiet -93 -work gsi
@@ -57,7 +57,7 @@ Vg]?nOch=6<@oYFK`AFDha0
 !s100 R7754=>DKW6dB_C131aJE3
 R10
 31
-Z18 !s108 1333772936.544798
+Z18 !s108 1333804215.267435
 Z19 !s90 -quiet|-93|-work|gsi|../../lib/gsi/ssram/g880e18bt.vhd|
 Z20 !s107 ../../lib/gsi/ssram/g880e18bt.vhd|
 R14
@@ -101,7 +101,7 @@ L61
 VVNjo_XTWGPIIQ7Sd:HYjk3
 R10
 31
-Z29 !s108 1333772936.470930
+Z29 !s108 1333804215.196952
 Z30 !s90 -quiet|-93|-work|gsi|../../lib/gsi/ssram/core_burst.vhd|
 Z31 !s107 ../../lib/gsi/ssram/core_burst.vhd|
 R14

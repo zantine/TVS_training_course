@@ -2,7 +2,7 @@ m255
 K3
 13
 cModel Technology
-Z0 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+Z0 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
 Pcomponents
 Z1 DPx5 grlib 7 version 0 22 1m_Cgoejn7LU6]zafCACE0
 Z2 DPx4 ieee 11 numeric_std 0 22 k7B<7GmYYYmX;0X]XHFD10
@@ -11,7 +11,7 @@ Z4 DPx4 work 17 hy5ps121621f_pack 0 22 lND=QV;moQQ@_3I@zGZkL0
 Z5 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
 Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z7 w1333722057
-Z8 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+Z8 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
 8../../lib/hynix/ddr2/components.vhd
 F../../lib/hynix/ddr2/components.vhd
 l0
@@ -20,7 +20,7 @@ ViRDL]A;oT:`K?KnBIahY>0
 !s100 dSaioG[:<aELm72cPHg<h1
 Z9 OL;C;10.0b;49
 31
-!s108 1333772936.983611
+!s108 1333804215.685949
 !s90 -quiet|-93|-work|hynix|../../lib/hynix/ddr2/components.vhd|
 !s107 ../../lib/hynix/ddr2/components.vhd|
 Z10 o-quiet -93 -work hynix
@@ -46,7 +46,7 @@ L30
 V^a09KTo]aa1XMdLXRgU1j1
 R9
 31
-Z19 !s108 1333772936.850219
+Z19 !s108 1333804215.564482
 Z20 !s90 -quiet|-93|-work|hynix|../../lib/hynix/ddr2/HY5PS121621F.vhd|
 Z21 !s107 ../../lib/hynix/ddr2/HY5PS121621F.vhd|
 R10
@@ -92,7 +92,7 @@ VlND=QV;moQQ@_3I@zGZkL0
 R9
 31
 b1
-Z24 !s108 1333772936.798231
+Z24 !s108 1333804215.510623
 Z25 !s90 -quiet|-93|-work|hynix|../../lib/hynix/ddr2/HY5PS121621F_PACK.vhd|
 Z26 !s107 ../../lib/hynix/ddr2/HY5PS121621F_PACK.vhd|
 R10

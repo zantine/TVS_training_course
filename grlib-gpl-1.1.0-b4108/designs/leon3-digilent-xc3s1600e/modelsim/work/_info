@@ -2,7 +2,7 @@ m255
 K3
 13
 cModel Technology
-Z0 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+Z0 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
 Eahbrom
 Z1 w1333722020
 Z2 DPx5 grlib 7 devices 0 22 nH[U_@>flN29_7Tnj89QB3
@@ -13,7 +13,7 @@ Z6 DPx4 ieee 11 numeric_std 0 22 k7B<7GmYYYmX;0X]XHFD10
 Z7 DPx5 grlib 4 amba 0 22 lANGVoniT0WO]bYU@YQ0P0
 Z8 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
 Z9 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z10 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+Z10 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
 Z11 8ahbrom.vhd
 Z12 Fahbrom.vhd
 l0
@@ -21,7 +21,7 @@ L26
 VDcFBWiV7Y@5Gj]`SE8oK:2
 Z13 OL;C;10.0b;49
 31
-Z14 !s108 1333772937.781568
+Z14 !s108 1333804216.460851
 Z15 !s90 -quiet|-93|-work|work|ahbrom.vhd|
 Z16 !s107 ahbrom.vhd|
 Z17 o-quiet -93 -work work
@@ -69,7 +69,7 @@ R13
 R17
 R18
 !s100 9Qg^0C_leARYTlzQJ1`eh0
-!s108 1333772937.730023
+!s108 1333804216.407991
 !s90 -quiet|-93|-work|work|config.vhd|
 !s107 config.vhd|
 Ecpu_disas
@@ -89,7 +89,7 @@ L36
 VI<Cm0T]:lfI[SIQ`9J[AO2
 R13
 31
-Z26 !s108 1333772937.673964
+Z26 !s108 1333804216.351569
 Z27 !s90 -quiet|-93|-work|work|../../lib/work/debug/cpu_disas.vhd|
 Z28 !s107 ../../lib/work/debug/cpu_disas.vhd|
 R17
@@ -135,7 +135,7 @@ R13
 R17
 R18
 !s100 >2?o60cYoUCRdY1PWEJzg3
-!s108 1333772937.569147
+!s108 1333804216.246765
 !s90 -quiet|-93|-work|work|../../lib/work/debug/debug.vhd|
 !s107 ../../lib/work/debug/debug.vhd|
 Egaisler_cpu_disas
@@ -201,7 +201,7 @@ L67
 V7I5jb>^mmPbM;7hf6Ha691
 R13
 31
-Z33 !s108 1333772937.611480
+Z33 !s108 1333804216.294935
 Z34 !s90 -quiet|-93|-work|work|../../lib/work/debug/grtestmod.vhd|
 Z35 !s107 ../../lib/work/debug/grtestmod.vhd|
 R17
@@ -258,7 +258,7 @@ L44
 V=UoK]R3^bD<A?E05WV8f80
 R13
 31
-Z48 !s108 1333772937.844303
+Z48 !s108 1333804216.519747
 Z49 !s90 -quiet|-93|-work|work|leon3mp.vhd|
 Z50 !s107 leon3mp.vhd|
 R17
@@ -324,7 +324,7 @@ V]MnW]1k6mWfWb<S:5E6LQ3
 !s100 e[Eg`g8ZPA0@omWm4Z9Km1
 R13
 31
-Z58 !s108 1333772937.940644
+Z58 !s108 1333804216.612330
 Z59 !s90 -quiet|-93|-work|work|testbench.vhd|
 Z60 !s107 testbench.vhd|
 R17

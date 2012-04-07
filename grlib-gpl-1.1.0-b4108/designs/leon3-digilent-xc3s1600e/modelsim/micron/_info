@@ -2,12 +2,12 @@ m255
 K3
 13
 cModel Technology
-Z0 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+Z0 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
 Pcomponents
 Z1 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
 Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z3 w1333722057
-Z4 d/home/mike/grlib/designs/leon3-digilent-xc3s1600e
+Z4 d/home/mike/myproject/grlib-gpl-1.1.0-b4108/designs/leon3-digilent-xc3s1600e
 8../../lib/micron/sdram/components.vhd
 F../../lib/micron/sdram/components.vhd
 l0
@@ -18,7 +18,7 @@ Z5 OL;C;10.0b;49
 Z6 o-quiet -93 -work micron
 Z7 tShow_source 1 Show_Warning1 0 Show_Warning5 0 Explicit 1 Quiet 1
 !s100 kX^E93M1m[lkSI]BB;_E82
-!s108 1333772937.098926
+!s108 1333804215.793770
 !s90 -quiet|-93|-work|micron|../../lib/micron/sdram/components.vhd|
 !s107 ../../lib/micron/sdram/components.vhd|
 vddr2
@@ -36,7 +36,7 @@ Z9 o-quiet -work micron
 Z10 tQuiet 1
 !s100 Id=g8P?3DWUF@H1`VJ8D]0
 !s85 0
-!s108 1333772937.227802
+!s108 1333804215.913905
 !s107 ../../lib/micron/ddr/ddr2.v|
 !s90 -quiet|-work|micron|../../lib/micron/ddr/ddr2.v|
 vddr3
@@ -54,7 +54,7 @@ R9
 R10
 !s100 b;][o`=ij8P0MOT[mgVG_2
 !s85 0
-!s108 1333772937.375203
+!s108 1333804216.056508
 !s107 ../../lib/micron/ddr/ddr3.v|
 !s90 -quiet|-work|micron|../../lib/micron/ddr/ddr3.v|
 vmobile_ddr
@@ -72,7 +72,7 @@ R9
 R10
 !s100 ^0Q;ASC;FVGZgUIXCi4c=1
 !s85 0
-!s108 1333772937.314603
+!s108 1333804215.998951
 !s107 ../../lib/micron/ddr/mobile_ddr.v|
 !s90 -quiet|-work|micron|../../lib/micron/ddr/mobile_ddr.v|
 vmobile_sdr
@@ -90,7 +90,7 @@ R9
 R10
 !s100 M4PI1WjkzQOSnimdU;;162
 !s85 0
-!s108 1333772937.025833
+!s108 1333804215.724829
 !s107 ../../lib/micron/sdram/mobile_sdr.v|
 !s90 -quiet|-work|micron|../../lib/micron/sdram/mobile_sdr.v|
 Emt46v16m16
@@ -115,7 +115,7 @@ Va9gRK;KGNTVkcgCmzgLBl2
 !s100 Ua]>L`WN<49L^<MkiZ4=o1
 R5
 31
-Z22 !s108 1333772937.483244
+Z22 !s108 1333804216.160974
 Z23 !s90 -quiet|-93|-work|micron|../../lib/micron/ddr/mt46v16m16.vhd|
 Z24 !s107 ../../lib/micron/ddr/mt46v16m16.vhd|
 R6
@@ -165,7 +165,7 @@ L206
 VMCY8iR?RH61oMA9bh7ReL1
 R5
 31
-Z27 !s108 1333772937.132768
+Z27 !s108 1333804215.823865
 Z28 !s90 -quiet|-93|-work|micron|../../lib/micron/sdram/mt48lc16m16a2.vhd|
 Z29 !s107 ../../lib/micron/sdram/mt48lc16m16a2.vhd|
 R6
