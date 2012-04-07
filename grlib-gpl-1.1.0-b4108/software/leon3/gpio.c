@@ -35,17 +35,18 @@ int gpio_fifo_test(int addr)
         int value;
         
 	report_device(0x0101a000);
-        pio[1] = 0;
-  
+        pio[2] = 0; /* any write to this register clears the fifo */  
         report_subtest(1);
 
         /* determine port width and mask */
         mask = 0;
         width = 0;
         value = 0;
+
+        pio[1] = 0;
+	value = pio[0];
         
 	pio[1] = 0xFFFFFFFF;
-
         value = pio[0];
 
         while( ((value >> width) & 1) && (width <= 32)) {
@@ -55,8 +56,10 @@ int gpio_fifo_test(int addr)
         
         pio[1] = 0;
         if( (pio[0] & mask) != 0) fail(1);  
+
         pio[1] = 0x89ABCDEF;
 	        if( (pio[0] & mask) != (0x89ABCDEF & mask)) fail(2);
+
 	pio[1] = 0xFED;
 	if (pio[0] != 0xFED) fail(3);
 

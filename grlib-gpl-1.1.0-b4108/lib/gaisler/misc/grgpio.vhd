@@ -113,17 +113,22 @@ architecture rtl of grgpio is
 
 constant REVISION : integer := 1;
 
+constant POINTER_WIDTH : integer := 2;         -- define pointer width for data FIFO
+constant FIFO_DEPTH : integer := 4;     -- defined by pointer width
+
 constant pconfig : apb_config_type := (
   0 => ahb_device_reg ( VENDOR_GAISLER, GAISLER_GPIO, 0, REVISION, pirq),
   1 => apb_iobar(paddr, pmask));
 
 component the_fifo
-    generic (fbits : integer := 16;
-             pwidth : integer := 3);
+    generic (fbits : integer := nbits;
+             pwidth : integer := POINTER_WIDTH;
+             fdepth : integer := FIFO_DEPTH);
     port (
 	clk, clr_fifo, rd_fifo, wr_fifo  : in std_ulogic;  
       	data_in : in std_logic_vector(fbits-1 downto 0);
-        data_out : out std_logic_vector(fbits-1 downto 0);
+        data_out, data_out1 : out std_logic_vector(fbits-1 downto 0);
+        data_counter: out std_logic_vector(pwidth-1 downto 0);
         data_out_valid, empty, full : out std_ulogic
     );
 end component;
@@ -133,27 +138,33 @@ signal arst   : std_ulogic := '1';
 signal frst   : std_ulogic := '1';        -- FIFO reset (active high unlike arst)
 
 signal data_out_valid, empty, full : std_ulogic;
+signal data_counter : std_logic_vector(31 downto 0);
 
 begin
   data_fifo : the_fifo
-	  generic map (fbits => nbits, pwidth => 2)
+	  generic map (fbits => nbits, pwidth => POINTER_WIDTH, fdepth => FIFO_DEPTH)
           port map (clk => clk, clr_fifo => frst, rd_fifo => rd, wr_fifo => wr,
-                    data_in => apbi.pwdata(nbits-1 downto 0), data_out => apbo.prdata(nbits-1 downto 0),
-                    data_out_valid => data_out_valid, empty => empty, full => full); 
+                    data_in => apbi.pwdata(nbits-1 downto 0), data_out => apbo.prdata(nbits-1 downto 0), data_out1 => gpioo.dout(nbits-1 downto 0),
+                    data_counter => data_counter(POINTER_WIDTH-1 downto 0), data_out_valid => data_out_valid, empty => empty, full => full); 
   arst <= apbi.testrst when (scantest = 1) and (apbi.testen = '1') else rst;
-  frst <= not rst;
   action : process (arst, apbi)
   variable xirq : std_logic_vector(NAHBIRQ-1 downto 0);
   begin
     apbo.prdata(31 downto nbits) <= (others => '0');
+    gpioo.dout(31 downto nbits) <= (others => '0');
+    data_counter(31 downto POINTER_WIDTH) <= (others => '0');
 -- write
     if (apbi.psel(pindex) and apbi.penable and apbi.pwrite) = '1' then
       case apbi.paddr(5 downto 2) is
       when "0001" => wr <= '1';
-      when others => wr <= '0';
+      when "0010" => frst <= '1';
+      when others =>
+          wr <= '0';
+          frst <= not arst;
       end case;
     else
       wr <= '0';
+      frst <= not arst;
     end if;
 -- read registers
     if (apbi.psel(pindex) and apbi.penable and not apbi.pwrite) = '1' then
