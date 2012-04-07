@@ -144,6 +144,7 @@
 # Loading gaisler.irqmp(rtl)
 # Loading gaisler.gptimer(rtl)
 # Loading gaisler.grgpio(rtl)
+# Loading gaisler.the_fifo(rtl)
 # Loading gaisler.apbps2(rtl)
 # Loading gaisler.svgactrl(rtl)
 # Loading gaisler.grethm(rtl)
@@ -2469,6 +2470,8 @@
 # ** Warning: (vsim-8684) No drivers exist on out port /testbench/d3/ddrsp0/ddrc/ahbso(4).hsplit(15 downto 0), and its initial value is not used.
 # Therefore, simulation behavior may occur that is not in compliance with
 # the VHDL standard as the initial values come from the base signal /testbench/d3/ahbso(4).hsplit(15 downto 0).
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/d3/gpio0/grgpio0/gpioo.dout(31 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
 # ** Warning: (vsim-8684) No drivers exist on out port /testbench/d3/eth0/e1/m100/u0/etho.txd(7), and its initial value is not used.
 # Therefore, simulation behavior may occur that is not in compliance with
 # the VHDL standard as the initial values come from the base signal /testbench/d3/etho.txd(7).
@@ -2554,13 +2557,6 @@ run -a
 # clkgen_spartan3e: Frequency 50000 KHz, DCM divisor 4/5
 # 
 # **** GRLIB system test starting ****
-# Leon3 SPARC V8 Processor       
-#   CPU#0 register file
-#   CPU#0 multiplier
-#   CPU#0 radix-2 divider
-#   CPU#0 cache system
-#   CPU#0 memory management unit
-# Multi-processor Interrupt Ctrl.
 # Modular Timer Unit             
 #   timer 1
 #   timer 2
@@ -2571,6 +2567,5 @@ run -a
 # Test passed, halting with IU error mode
 # 
 # ** Failure: *** IU in error mode, simulation halted ***
-#    Time: 1360 us  Iteration: 0  Process: /testbench/iuerr File: testbench.vhd
+#    Time: 415 us  Iteration: 0  Process: /testbench/iuerr File: testbench.vhd
 # Break in Process iuerr at testbench.vhd line 215
-quit

@@ -1,8 +1,4 @@
 ------------------------------------------------------------------------------
---  This file is a part of the GRLIB VHDL IP LIBRARY
---  Copyright (C) 2003 - 2008, Gaisler Research
---  Copyright (C) 2008 - 2010, Aeroflex Gaisler
---
 --  This program is free software; you can redistribute it and/or modify
 --  it under the terms of the GNU General Public License as published by
 --  the Free Software Foundation; either version 2 of the License, or
@@ -59,6 +55,41 @@ use std.textio.all;
 ----    sig_out  : std_logic_vector(31 downto 0);
 --  end record;
   
+entity the_fifo is
+generic (fbits : integer := 16);
+port (
+	clr_fifo, rd_fifo, wr_fifo  : in std_ulogic;  
+      	data_in : in std_logic_vector(fbits-1 downto 0);
+        data_out : out std_logic_vector(fbits-1 downto 0)
+);
+end the_fifo;
+
+architecture rtl of the_fifo is
+signal fifo_data : std_logic_vector(fbits-1 downto 0) := (others => '0');
+begin  -- rtl
+act_as_a_fifo : process (clr_fifo, wr_fifo, rd_fifo)
+begin  -- process
+  if clr_fifo = '0' then                -- asynchronous reset (active low)
+    fifo_data <= (others => '0');
+  elsif wr_fifo'event and wr_fifo = '1' then
+    fifo_data <= data_in;
+  end if;
+  data_out <= fifo_data;
+end process;
+end rtl;
+
+library ieee;
+use ieee.std_logic_1164.all;
+library grlib;
+use grlib.amba.all;
+use grlib.stdlib.all;
+use grlib.devices.all;
+library gaisler;
+use gaisler.misc.all;
+--pragma translate_off
+use std.textio.all;
+--pragma translate_on
+
 entity grgpio is
   generic (
     pindex   : integer := 0;
@@ -74,7 +105,6 @@ entity grgpio is
     clk    : in  std_ulogic;
     apbi   : in  apb_slv_in_type;
     apbo   : out apb_slv_out_type;
---    gpioi  : in  gpio_in_type;
     gpioo  : out gpio_out_type
   );
 end;
@@ -87,101 +117,53 @@ constant pconfig : apb_config_type := (
   0 => ahb_device_reg ( VENDOR_GAISLER, GAISLER_GPIO, 0, REVISION, pirq),
   1 => apb_iobar(paddr, pmask));
 
-type registers is record
-  din1  	:  std_logic_vector(nbits-1 downto 0);
-  din2  	:  std_logic_vector(nbits-1 downto 0);
---  dout   	:  std_logic_vector(nbits-1 downto 0);
-end record;
+component the_fifo
+    generic (fbits : integer := 16);
+    port (
+	clr_fifo, rd_fifo, wr_fifo  : in std_ulogic;  
+      	data_in : in std_logic_vector(fbits-1 downto 0);
+        data_out : out std_logic_vector(fbits-1 downto 0)
+    );
+end component;
 
-type fifo is record
-               dout : std_logic_vector(nbits-1 downto 0);
-             end record;
-
-signal r, rin : registers;
-signal f, fin : fifo;
-signal dout   : std_logic_vector(31 downto 0);
-signal arst   : std_ulogic;
+signal wr, rd : std_ulogic := '0';
+signal arst   : std_ulogic := '1';
 
 begin
-
+  data_fifo : the_fifo
+	  generic map (fbits => nbits)
+          port map (clr_fifo => '1', rd_fifo => rd, wr_fifo => wr, data_in => apbi.pwdata(nbits-1 downto 0), data_out => apbo.prdata(nbits-1 downto 0)); 
   arst <= apbi.testrst when (scantest = 1) and (apbi.testen = '1') else rst;
-  
-actfifo : process(rst, f, apbi)
-  variable w : fifo;
-  begin
-
-    dout <= (others => '0');
-    dout(nbits-1 downto 0) <= f.dout(nbits-1 downto 0);
-    w := f; 
-
--- write registers
-    if (apbi.psel(pindex) and apbi.penable and apbi.pwrite) = '1' then
-      case apbi.paddr(5 downto 2) is
-      when "0000" => null;
-      when "0001" => w.dout := apbi.pwdata(nbits-1 downto 0);
-      when others =>
-          null;
-      end case;
-    end if;
-
-    if rst = '0' then
-      w.dout := (others => '0');
-    end if;
-    
-    fin <= w;
-
-  end process;
-
-  regsfifo : process(clk, arst)
-  begin
-    if rising_edge(clk) then f <= fin; end if;
-  end process;
-
-  actgpio : process(rst, r, f, apbi, dout)
-  variable readdata, pval : std_logic_vector(31 downto 0);
-  variable v : registers;
+  action : process (arst, apbi)
   variable xirq : std_logic_vector(NAHBIRQ-1 downto 0);
   begin
-
-    v := r; v.din2 := r.din1;
-    v.din1 := dout(nbits-1 downto 0);  -- loop back dout to din
-
+    apbo.prdata(31 downto nbits) <= (others => '0');
+-- write
+    if (apbi.psel(pindex) and apbi.penable and apbi.pwrite) = '1' then
+      case apbi.paddr(5 downto 2) is
+      when "0001" => wr <= '1';
+      when others => wr <= '0';
+      end case;
+    else
+      wr <= '0';
+    end if;
 -- read registers
-    readdata := (others => '0');
-    case apbi.paddr(5 downto 2) is
-    when "0000" => readdata(nbits-1 downto 0) := r.din2;
-    when "0001" => readdata(nbits-1 downto 0) := dout(nbits-1 downto 0);
-    when others =>
-      null;
-    end case;
-
+    if (apbi.psel(pindex) and apbi.penable and not apbi.pwrite) = '1' then
+      case apbi.paddr(5 downto 2) is
+      when "0000" => rd <= '1'; 
+      when others => rd <= '0';
+      end case;
+    else
+      rd <= '0';
+    end if;
 -- interrupt filtering and routing
     xirq := (others => '0');
-
 -- drive filtered inputs on the output record
-
-   pval := (others => '0');
-   pval(nbits-1 downto 0) := r.din2;
-    
-    rin <= v;
-
-    apbo.prdata <= readdata; 	-- drive apb read bus
     apbo.pirq <= xirq;
-
-    gpioo.dout <= dout;
-    gpioo.val <= pval;
-
-  end process;
+end process;         
 
   apbo.pindex <= pindex;
   apbo.pconfig <= pconfig;
-
--- registers
-
-  regs : process(clk, arst)
-  begin
-    if rising_edge(clk) then r <= rin; end if;
-  end process;
 
 -- boot message
 
@@ -191,4 +173,4 @@ actfifo : process(rst, f, apbi)
 	": " &  tost(nbits) & "-bit GPIO Unit rev " & tost(REVISION));
 -- pragma translate_on
 
-end;
+end rtl;

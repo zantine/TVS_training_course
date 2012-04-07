@@ -351,7 +351,7 @@ package misc is
   type gpio_out_type is record
     dout     : std_logic_vector(31 downto 0);
 --    oen      : std_logic_vector(31 downto 0);
-    val      : std_logic_vector(31 downto 0);
+--    val      : std_logic_vector(31 downto 0);
 --    sig_out  : std_logic_vector(31 downto 0);
   end record;
 
