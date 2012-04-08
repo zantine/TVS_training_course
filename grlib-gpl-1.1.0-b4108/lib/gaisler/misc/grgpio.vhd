@@ -5,7 +5,7 @@
 --  (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
---  but WITHOUT ANY sWARRANTY; without even the implied warranty of
+--  but WITHOUT ANY WARRANTY; without even the implied warranty of
 --  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 --  GNU General Public License for more details.
 --
@@ -20,7 +20,7 @@
 --              Hacked to simplify functionality and embed a FIFO
 ------------------------------------------------------------------------------
 -- GRLIB2 CORE
--- VENDOR:      VENDOR_GAISLER
+-- VENDOR:      VENDORo_GAISLER
 -- DEVICE:      GAISLER_GPIO
 -- VERSION:     0
 -- APB:         0
@@ -40,19 +40,18 @@ use std.textio.all;
 --pragma translate_on
 
 -------------------------------------------------------------------------------
--- FYI: code from misc.vhd
+-- FYI: definition of gpio I/F data types from misc.vhd
 -------------------------------------------------------------------------------
-----  type gpio_in_type is record
-----    data_in      : std_logic_vector(31 downto 0);
-----    sig_in   : std_logic_vector(31 downto 0);
-----    sig_en   : std_logic_vector(31 downto 0);
-----  end record;
+-- type gpio_in_type is record
+--    ext_rd_fifo  : std_ulogic;
+-- end record;
 
 --  type gpio_out_type is record
---    data_out     : std_logic_vector(31 downto 0);
-----    oen      : std_logic_vector(31 downto 0);
+--    data_out : std_logic_vector(31 downto 0);
 --    val      : std_logic_vector(31 downto 0);
-----    sig_out  : std_logic_vector(31 downto 0);
+--    data_out_valid : std_ulogic;
+--    fifo_empty     : std_ulogic;
+--    fifo_full      : std_ulogic;
 --  end record;
 
 library ieee;
@@ -82,6 +81,7 @@ entity grgpio is
     clk    : in  std_ulogic;
     apbi   : in  apb_slv_in_type;
     apbo   : out apb_slv_out_type;
+    gpioi  : in  gpio_in_type;
     gpioo  : out gpio_out_type
   );
 end;
@@ -113,30 +113,35 @@ end component;
 signal wr, rd : std_ulogic := '0';
 signal arst   : std_ulogic := '1';
 signal frst   : std_ulogic := '1';        -- FIFO reset (active high unlike arst)
-signal en_int : std_ulogic := '0'; 
+signal en_int : std_ulogic := '0';        -- In future this will be used to enable interrupts
 
-signal data_out_valid, fifo_empty, fifo_full : std_ulogic;
+signal fifo_empty, fifo_full : std_ulogic;
 signal data_counter : std_logic_vector(31 downto 0);
 signal dout : std_logic_vector(nbits-1 downto 0);
 
+-- Instantiate the Verilog FIFO via a component declaration
 begin
   data_fifo : the_fifo
 	  generic map (fbits => nbits, pwidth => pointer_width, fdepth => fifo_depth)
           port map (clk => clk, clr_fifo => frst, rd_fifo => rd, wr_fifo => wr,
                     data_in => apbi.pwdata(nbits-1 downto 0), data_out => dout,
-                    data_counter => data_counter(pointer_width downto 0), data_out_valid => data_out_valid, empty => fifo_empty, full => fifo_full); 
+                    data_counter => data_counter(pointer_width downto 0), data_out_valid => gpioo.data_out_valid, empty => fifo_empty, full => fifo_full); 
   arst <= apbi.testrst when (scantest = 1) and (apbi.testen = '1') else rst;
-  action : process (arst, apbi)
+
+  action : process (clk, arst, apbi)
   variable xirq : std_logic_vector(NAHBIRQ-1 downto 0);
   begin
     apbo.prdata(31 downto nbits) <= (others => '0');
     gpioo.dout(31 downto nbits) <= (others => '0');
     data_counter(31 downto pointer_width) <= (others => '0');
+    gpioo.fifo_empty <= fifo_empty;
+    gpioo.fifo_full <= fifo_full;
 -- write
     if (apbi.psel(pindex) and apbi.penable and apbi.pwrite) = '1' then
       case apbi.paddr(5 downto 2) is
       when "0001" => wr <= '1';
-      when "0010" => frst <= '1';
+      when "0010" =>
+        frst <= '1';
       when "1000" => en_int <=  apbi.pwdata(0);
       when others =>
           wr <= '0';
@@ -165,13 +170,17 @@ begin
             if (fifo_empty = '1') then
               apbo.prdata(0) <= '1';
             end if;
-            if fifo_full = '1' then
+            if (fifo_full = '1') then
               apbo.prdata(1) <= '1';              
             end if;
         when others =>
           rd <= '0';
       end case;
     else
+-- If GPIO not being accessed over APB then external interface can perform reads
+-- To be enabled once top level test bench is able to control ext_rd
+--    rd <= gpioi.ext_rd;
+--    gpioo.dout(nbits-1 downto 0) <= dout(nbits-1 downto 0);
       rd <= '0';
     end if;
 -- interrupt filtering and routing

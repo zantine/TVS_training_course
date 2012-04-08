@@ -1,5 +1,19 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
+add wave -noupdate /testbench/d3/gpio0/grgpio0/rst
+add wave -noupdate /testbench/d3/gpio0/grgpio0/clk
+add wave -noupdate /testbench/d3/gpio0/grgpio0/apbi
+add wave -noupdate /testbench/d3/gpio0/grgpio0/apbo
+add wave -noupdate -expand /testbench/d3/gpio0/grgpio0/gpioo
+add wave -noupdate /testbench/d3/gpio0/grgpio0/wr
+add wave -noupdate /testbench/d3/gpio0/grgpio0/rd
+add wave -noupdate /testbench/d3/gpio0/grgpio0/arst
+add wave -noupdate /testbench/d3/gpio0/grgpio0/frst
+add wave -noupdate /testbench/d3/gpio0/grgpio0/en_int
+add wave -noupdate /testbench/d3/gpio0/grgpio0/fifo_empty
+add wave -noupdate /testbench/d3/gpio0/grgpio0/fifo_full
+add wave -noupdate /testbench/d3/gpio0/grgpio0/data_counter
+add wave -noupdate /testbench/d3/gpio0/grgpio0/dout
 add wave -noupdate /testbench/d3/gpio0/grgpio0/data_fifo/clk
 add wave -noupdate /testbench/d3/gpio0/grgpio0/data_fifo/clr_fifo
 add wave -noupdate /testbench/d3/gpio0/grgpio0/data_fifo/rd_fifo

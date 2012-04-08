@@ -342,17 +342,15 @@ package misc is
       );
   end component;    
   
---  type gpio_in_type is record
---    din      : std_logic_vector(31 downto 0);
---    sig_in   : std_logic_vector(31 downto 0);
---    sig_en   : std_logic_vector(31 downto 0);
---  end record;
+type gpio_in_type is record
+    ext_rd  : std_ulogic;
+end record;
 
   type gpio_out_type is record
     dout     : std_logic_vector(31 downto 0);
---    oen      : std_logic_vector(31 downto 0);
---    val      : std_logic_vector(31 downto 0);
---    sig_out  : std_logic_vector(31 downto 0);
+    data_out_valid : std_ulogic;
+    fifo_empty : std_ulogic;
+    fifo_full : std_ulogic;
   end record;
 
  component grgpio
@@ -370,7 +368,7 @@ package misc is
     clk    : in  std_ulogic;
     apbi   : in  apb_slv_in_type;
     apbo   : out apb_slv_out_type;
- --   gpioi  : in  gpio_in_type;
+    gpioi  : in  gpio_in_type;
     gpioo  : out gpio_out_type
   );
   end component;
